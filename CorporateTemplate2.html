@@ -12,7 +12,7 @@ git remote add origin https://github.com/Zaghloul22/BWEP-Assignment-2-DITN11-Gro
 git push -u origin main-->
 
 <style media="screen">
-  div{
+  #content{
     height: 700px;
     width: 500px;
     background-image: url(Template.jpg);
@@ -22,11 +22,10 @@ git push -u origin main-->
     padding: 0;
     margin: 0 auto;
     text-align: center;
-  }
-
-  #content{
     padding-top:100px;
   }
+
+
 
   p{
     padding: 0;
@@ -39,19 +38,78 @@ git push -u origin main-->
     font-family: Gabriola;
     font-weight: bolder;
   }
+
+  .drag2{
+    height: 50px;
+    width: 300px;
+    padding: 0;
+    font-size: 20px;
+    font-family: Garamond;
+    border:1px solid white;
+    margin: 0 auto;
+    background-color: navy;
+  }
+
+  input,textarea{
+    background-color: navy;
+    color: white;
   }
 </style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
   </head>
   <body>
     <div>
       <div id="content">
-      <p>You are invited to</p>
-      <p id="Company">Corporate name</p>
+      <p>You are invited for</p>
+      <p id="Company"><div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div></p>
       <p>Phone Number</p>
+      <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       <p>Email Address</p>
+      <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       <p>Company Website</p>
+      <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       <p>Company Address</p>
-      </div
+      <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+    <label>Event name:</label>
+    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <input type="text" name="" value="" draggable="true" ondragstart="drag(event)"><br>
+    </div>
+
+    <label>Phone Number</label>
+    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <input type="number" name="" value="" pattern="[\d]{7}" draggable="true" ondragstart="drag(event)"><br>
+    </div>
+
+    <label>Email address</label>
+    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <input type="email" name="" value="" draggable="true" ondragstart="drag(event)"><br>
+    </div>
+
+    <label>Website</label>
+    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <input type="url" name="" value="" draggable="true" ondragstart="drag(event)"><br>
+    </div>
+
+    <label>Address</label>
+    <div  class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <textarea name="name" rows="8" cols="80" draggable="true" ondragstart="drag(event)"></textarea><br>
+    </div>
     </div>
   </body>
 </html>
