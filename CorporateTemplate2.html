@@ -61,7 +61,7 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+  ev.dataTransfer.setData("text", ev.target.class);
 }
 
 function drop(ev) {
@@ -88,28 +88,30 @@ function drop(ev) {
 
     <label>Event name:</label>
     <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="text" name="" value="" draggable="true" ondragstart="drag(event)"><br>
+      <input type="text" draggable="true" ondragstart="drag(event)"><br>
     </div>
 
     <label>Phone Number</label>
     <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="number" name="" value="" pattern="[\d]{7}" draggable="true" ondragstart="drag(event)"><br>
+      <input type="number" pattern="[\d]{7}" draggable="true" ondragstart="drag(event)"><br>
     </div>
 
     <label>Email address</label>
     <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="email" name="" value="" draggable="true" ondragstart="drag(event)"><br>
+      <input type="email" draggable="true" ondragstart="drag(event)"><br>
     </div>
 
     <label>Website</label>
     <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="url" name="" value="" draggable="true" ondragstart="drag(event)"><br>
+      <input type="url" draggable="true" ondragstart="drag(event)"><br>
     </div>
 
     <label>Address</label>
     <div  class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
       <textarea name="name" rows="8" cols="80" draggable="true" ondragstart="drag(event)"></textarea><br>
     </div>
+
+    <button type="button" name="button"><a href = "Assigment.html">Back</a></button>
     </div>
   </body>
 </html>

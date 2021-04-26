@@ -13,7 +13,8 @@ git remote add origin https://github.com/Zaghloul22/BWEP-Assignment-2-DITN11-Gro
 git push -u origin main-->
 
 <style media="screen">
-  div{
+
+  #content{
     border:8px ridge gold;
     height: 700px;
     width: 500px;
@@ -23,16 +24,9 @@ git push -u origin main-->
     margin: 0 auto;
     font-family: "Lobster";
     font-size: 30px;
-  }
 
-  #content{
-    overflow: auto;
-    height: 400px;
-    width: 350px;
-    border: 7px gold;
-    border-style:inset;
+
     display: block;
-    font-size: 40px;
     text-align: center;
     margin: 0 auto;
   }
@@ -48,21 +42,62 @@ git push -u origin main-->
     font-size: 60px;
     padding-top: 60px;
   }
+
+  .drag2{
+    height: 50px;
+    width: 300px;
+    padding: 0;
+    font-size: 20px;
+    font-family: Garamond;
+    border:1px solid white;
+    margin: 0 auto;
+  }
 </style>
 <script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
 
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.class);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
 </script>
   </head>
   <body>
-    <div>
-      <div id="content">
-        <p>You are invited by </p>
-        <p id="logo">Company M<p>
-      </div>
+    <div id="content">
+        <p>You are invited for </p>
+        <p id="logo"><div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div><p>
         <p>Location Address</p>
+        <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <p>Date</p>
-        <p>Reservation</p>
+        <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
-    <button type="button" name="button">Customise</button>
+    <label>Event name:</label>
+    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <input type="text" draggable="true" ondragstart="drag(event)"><br>
+    </div>
+
+    <label>Address</label>
+    <div  class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <textarea name="name" rows="8" cols="80" draggable="true" ondragstart="drag(event)"></textarea><br>
+    </div>
+
+    <label>Date:</label>
+    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <input type="date" draggable="true" ondragstart="drag(event)"><br>
+    </div>
+
+    <label>Phone Number</label>
+    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <input type="number" pattern="[\d]{7}" draggable="true" ondragstart="drag(event)"><br>
+    </div>
+
+    <button type="button" name="button"><a href = "Assigment.html">Back</a></button>
   </body>
 </html>
