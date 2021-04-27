@@ -8,7 +8,7 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/Zaghloul22/BWEP-Assignment-2-DITN11-Grop-2.git
+git remote add origin https://github.com/Zaghloul22/BWEP-Assignment-2-DITN11-Group-2.git
 git push -u origin main-->
 
 <style media="screen">
@@ -39,77 +39,100 @@ git push -u origin main-->
     font-weight: bolder;
   }
 
-  .drag2{
+  #Event, #Address, #Phone, #Email, #Website{
     height: 50px;
     width: 300px;
     padding: 0;
-    font-size: 20px;
+    font-size: 30px;
     font-family: Garamond;
-    border:1px solid white;
     margin: 0 auto;
-    background-color: navy;
+    color: white;
   }
 
   input,textarea{
     background-color: navy;
     color: white;
   }
+
+  form{
+    width: 600px;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    border: 2px solid black;
+    display: block;
+
+  }
 </style>
 <script>
-function allowDrop(event) {
-  event.preventDefault();
-}
+function ChangeMe(){
+  var eventname = document.getElementById("eventname").value;
+  var address = document.getElementById("address").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var website = document.getElementById("website").value;
 
-function drag(event) {
-  event.dataTransfer.setData("text", event.target.class);
-}
-
-function drop(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("text");
-  event.target.appendChild(document.getElementById(data));
+  var box1 = document.getElementById("Event");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("Address");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("Phone");
+  box3.innerHTML = phone;
+  var box4 = document.getElementById("Email");
+  box4.innerHTML = email;
+  var box5 = document.getElementById("Website");
+  box5.innerHTML = website;
 }
 </script>
   </head>
   <body>
     <div>
       <div id="content">
-      <p>You are invited for</p>
-      <p id="Company"><div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div></p>
-      <p>Phone Number</p>
-      <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <p>Email Address</p>
-      <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <p>Company Website</p>
-      <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <p>Company Address</p>
-      <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <p>You are invited for</p>
+        <p id="Event">Annual Anniversary</p>
+
+        <p>Corporate Address</p>
+        <div id="Address">Corporate 123 Street</div>
+
+        <p>Phone Number</p>
+      <div id="Phone">1234567</div>
+
+        <p>Email Address</p>
+      <div id="Email">Corporate@gmail.com</div>
+
+        <p>Company Website</p>
+      <div id="Website">www.Corporate.com</div>
+      </div>
     </div>
 
+  <form>
     <label>Event name:</label>
-    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="text" draggable="true" ondragstart="drag(event)"><br>
+    <div class="drag1">
+      <input id="eventname" type="text"/><br>
     </div>
 
     <label>Phone Number</label>
-    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="number" pattern="[\d]{7}" draggable="true" ondragstart="drag(event)"><br>
+    <div class="drag1">
+      <input id="phone" type="number" pattern="[\d]{7}"/><br>
     </div>
 
     <label>Email address</label>
-    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="email" draggable="true" ondragstart="drag(event)"><br>
+    <div class="drag1">
+      <input id="email" type="email"/><br>
     </div>
 
     <label>Website</label>
-    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="url" draggable="true" ondragstart="drag(event)"><br>
+    <div class="drag1">
+      <input id="website" type="url"/><br>
     </div>
 
     <label>Address</label>
-    <div  class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <textarea name="name" rows="8" cols="80" draggable="true" ondragstart="drag(event)"></textarea><br>
+    <div  class="drag1">
+      <textarea id="address" name="name" rows="8" cols="80"></textarea><br>
     </div>
+
+    <button type="button" name="button" onclick="ChangeMe()">Submit</button>
+  </form>
 
     <button type="button" name="button"><a href = "Assigment.html">Back</a></button>
     </div>
