@@ -48,55 +48,63 @@ git push -u origin main-->
     width: 300px;
     padding: 0;
     font-size: 20px;
-    font-family: Garamond;
-    border:1px solid white;
+    font-family: "lobster";
     margin: 0 auto;
   }
+
+  form{
+    width: 600px;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    border: 2px solid black;
+    display: block;
+  }
+  button{margin: 0 auto;}
 </style>
 <script>
-function allowDrop(ev) {
-  ev.preventDefault();
-}
+function change(){
+  var eventname = document.getElementById("event1").value;
+  var address = document.getElementById("address1").value;
+  var date = document.getElementById("date1").value;
 
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.class);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  var box1 = document.getElementById("event2");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("address2");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("date2");
+  box3.innerHTML = date;
 }
 </script>
   </head>
   <body>
     <div id="content">
-        <p>You are invited for </p>
-        <p id="logo"><div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div><p>
+        <p>You are invited by corporate for </p>
+        <p id="logo"><div class="drag2" id="event2">GRAND OPENING</div><p>
         <p>Location Address</p>
-        <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="drag2" id="address2">Corporate, floor 5</div>
         <p>Date</p>
-        <div class="drag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="drag2" id="date2">day/month/year</div>
     </div>
+
+    <form>
     <label>Event name:</label>
-    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="text" draggable="true" ondragstart="drag(event)"><br>
+    <div class="drag1">
+      <input id="event1" type="text"><br>
     </div>
 
     <label>Address</label>
-    <div  class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <textarea name="name" rows="8" cols="80" draggable="true" ondragstart="drag(event)"></textarea><br>
+    <div  class="drag1">
+      <textarea id="address1"name="name" rows="3" cols="60"></textarea><br>
     </div>
 
     <label>Date:</label>
-    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="date" draggable="true" ondragstart="drag(event)"><br>
+    <div class="drag1">
+      <input id="date1"type="date"><br>
     </div>
 
-    <label>Phone Number</label>
-    <div class="drag1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <input type="number" pattern="[\d]{7}" draggable="true" ondragstart="drag(event)"><br>
-    </div>
+    <button type="button" name="button" onclick="change()">Submit</button>
+  </form>
 
     <button type="button" name="button"><a href = "Assigment.html">Back</a></button>
   </body>
