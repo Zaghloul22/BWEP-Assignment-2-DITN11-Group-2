@@ -13,7 +13,7 @@ git push -u origin main-->
 
 <style media="screen">
   #content{
-    height: 700px;
+    height: 650px;
     width: 500px;
     background-image: url(Template.jpg);
     background-size: contain;
@@ -48,7 +48,7 @@ git push -u origin main-->
   }
 
   input,textarea{
-    background-color: navy;
+    background-color:#ADD8E6;
     color: white;
   }
 
@@ -59,6 +59,7 @@ git push -u origin main-->
     margin: 0 auto;
     border: 2px solid black;
     display: block;
+    background-color: #FF7276;
   }
 
 </style>
@@ -82,26 +83,14 @@ function ChangeMe(){
   var box5 = document.getElementById("Website");
   box5.innerHTML = website;
 
-
+ if(eventname&&address&&phone&&email&&website){
   localStorage.setItem("Event:",eventname);
   localStorage.setItem("Corporate Address:",address);
   localStorage.setItem("Phone Number:",phone);
   localStorage.setItem("Corporate Email:",email);
   localStorage.setItem("Corporate Website:",website);
-
-  // localStorage.removeItem("Event:",eventname);
-  // localStorage.removeItem("Corporate Address:",address);
-  // localStorage.removeItem("Phone Number:",phone);
-  // localStorage.removeItem("Corporate Email:",email);
-  // localStorage.removeItem("Corporate Website:",website);
-/* console.log(eventname);
-  console.log(address);
-  console.log(phone);
-  console.log(email);
-  console.log(website);
-  console.log(localStorage);*/
 }
-
+  }
 </script>
   </head>
   <body>
@@ -123,6 +112,7 @@ function ChangeMe(){
         <div id="Website">www.Corporate.com</div>
       </div>
     </div>
+    <br/>
 
     <form>
       <label>Event name:</label>
@@ -154,6 +144,5 @@ function ChangeMe(){
   </form>
 
   <button type="button" name="button"><a href = "Assigment.html">Back</a></button>
-    </div>
   </body>
 </html>
