@@ -82,7 +82,28 @@ function ChangeMe(){
   box4.innerHTML = email;
   var box5 = document.getElementById("Website");
   box5.innerHTML = website;
+
+
+  localStorage.setItem("Event:",eventname);
+  localStorage.setItem("Corporate Address:",address);
+  localStorage.setItem("Phone Number:",phone);
+  localStorage.setItem("Corporate Email:",email);
+  localStorage.setItem("Corporate Website:",website);
+
+  // localStorage.removeItem("Event:",eventname);
+  // localStorage.removeItem("Corporate Address:",address);
+  // localStorage.removeItem("Phone Number:",phone);
+  // localStorage.removeItem("Corporate Email:",email);
+  // localStorage.removeItem("Corporate Website:",website);
+/* console.log(eventname);
+  console.log(address);
+  console.log(phone);
+  console.log(email);
+  console.log(website);
+  console.log(localStorage);*/
 }
+
+
 </script>
   </head>
   <body>

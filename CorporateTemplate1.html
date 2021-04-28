@@ -74,6 +74,10 @@ function change(){
   box2.innerHTML = address;
   var box3 = document.getElementById("date2");
   box3.innerHTML = date;
+
+  localStorage.setItem("Event:",eventname);
+  localStorage.setItem("Corporate Address:",address);
+  localStorage.setItem("Date:",date);
 }
 </script>
   </head>
