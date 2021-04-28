@@ -36,8 +36,7 @@ body{
   }
 
   p{
-    padding: 0;
-    font-size: 20px;
+    font-size: 30px;
     font-family: Gabriola;
   }
 
@@ -48,6 +47,7 @@ body{
     font-family: Garamond;
     margin: 0 auto;
     color: white;
+    padding-bottom: 10px;
   }
 
   #Event{font-family:Lobster; font-weight: bolder;}
@@ -77,7 +77,6 @@ function ChangeMe(){
   var email = document.getElementById("email").value;
   var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
-  var time = document.getElementById("time").value;
 
   var box1 = document.getElementById("Event");
   box1.innerHTML = eventname;
@@ -91,17 +90,14 @@ function ChangeMe(){
   box5.innerHTML = website;
   var box6 = document.getElementById("Date");
   box6.innerHTML = date;
-  var box7 = document.getElementById("Time");
-  box5.innerHTML = time;
 
- if(eventname&&address&&phone&&email&&website&&date&&time){
+ if(eventname&&address&&phone&&email&&website&&date){
   localStorage.setItem("Event:",eventname);
   localStorage.setItem("Corporate Address:",address);
   localStorage.setItem("Phone Number:",phone);
   localStorage.setItem("Corporate Email:",email);
   localStorage.setItem("Corporate Website:",website);
   localStorage.setItem("Date:",date);
-  localStorage.setItem("Time:",time);
 }
   }
 </script>
@@ -116,8 +112,7 @@ function ChangeMe(){
         <div id="Address">Corporate 123 Street</div>
 
         <p>Date</p>
-        <div id="Date">DD:MM:YYYY</div>,
-        <div id="Time">00:00 ~ 23:59</div><br/>
+        <div id="Date">DD:MM:YYYY, 00:00</div><br/>
 
         <p id="Phone">1234567</p>
         <p id="Email">Corporate@gmail.com</p>
@@ -148,11 +143,6 @@ function ChangeMe(){
       </div>
 
       <label>Date</label>
-      <div class="drag1">
-        <input id="date" type=" date"/><br>
-      </div>
-
-      <label>Time</label>
       <div class="drag1">
         <input id="time" type="datetime-local"/><br>
       </div>

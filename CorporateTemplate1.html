@@ -89,14 +89,11 @@ function change(){
   box2.innerHTML = address;
   var box3 = document.getElementById("date2");
   box3.innerHTML = date;
-  var box4 = document.getElementById("time2");
-  box3.innerHTML = time;
 
-  if(eventname&&address&&date&&time){
+  if(eventname&&address&&date){
   localStorage.setItem("Event:",eventname);
   localStorage.setItem("Corporate Address:",address);
   localStorage.setItem("Date:",date);
-  localStorage.setItem("Time:",time);
 }
 }
 </script>
@@ -108,10 +105,8 @@ function change(){
         <p><div class="drag2" id="event2">GRAND OPENING</div></p>
         <p>Location Address</p>
         <div class="drag2" id="address2">Corporate, floor 5</div>
-        <p>Date</p>
-        <div class="drag2" id="date2">day/month/year</div>
-        <p>Time</p>
-        <div class="drag2" id="time2">00:00 ~ 23:59</div>
+        <p>Date & Time</p>
+        <div class="drag2" id="date2">day/month/year, 00:00 ~ 23:59</div>
     </div>
 
     <form>
@@ -125,14 +120,9 @@ function change(){
         <textarea id="address1"name="name" rows="3" cols="60"></textarea><br>
       </div>
 
-      <label>Date:</label>
+      <label>Date & Time</label>
       <div class="drag1">
-        <input id="date1"type="date"><br>
-      </div>
-
-      <label>Time</label>
-      <div class="drag1">
-        <input id="time1" type="datetime-local"/><br>
+        <input id="date1" type="datetime-local"/><br>
       </div>
 
       <button type="button" name="button" onclick="change()">Submit</button>
