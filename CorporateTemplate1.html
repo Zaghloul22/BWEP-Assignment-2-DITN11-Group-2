@@ -14,6 +14,15 @@ git push -u origin main-->
 
 <style media="screen">
 
+body{
+  background-image: url(Website_Background.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+
   #content{
     border:8px ridge gold;
     height: 700px;
@@ -72,6 +81,7 @@ function change(){
   var eventname = document.getElementById("event1").value;
   var address = document.getElementById("address1").value;
   var date = document.getElementById("date1").value;
+  var time = document.getElementById("time1").value;
 
   var box1 = document.getElementById("event2");
   box1.innerHTML = eventname;
@@ -79,11 +89,14 @@ function change(){
   box2.innerHTML = address;
   var box3 = document.getElementById("date2");
   box3.innerHTML = date;
+  var box4 = document.getElementById("time2");
+  box3.innerHTML = time;
 
-  if(eventname&&address&&date){
+  if(eventname&&address&&date&&time){
   localStorage.setItem("Event:",eventname);
   localStorage.setItem("Corporate Address:",address);
   localStorage.setItem("Date:",date);
+  localStorage.setItem("Time:",time);
 }
 }
 </script>
@@ -97,6 +110,8 @@ function change(){
         <div class="drag2" id="address2">Corporate, floor 5</div>
         <p>Date</p>
         <div class="drag2" id="date2">day/month/year</div>
+        <p>Time</p>
+        <div class="drag2" id="time2">00:00 ~ 23:59</div>
     </div>
 
     <form>
@@ -113,6 +128,11 @@ function change(){
       <label>Date:</label>
       <div class="drag1">
         <input id="date1"type="date"><br>
+      </div>
+
+      <label>Time</label>
+      <div class="drag1">
+        <input id="time1" type="datetime-local"/><br>
       </div>
 
       <button type="button" name="button" onclick="change()">Submit</button>

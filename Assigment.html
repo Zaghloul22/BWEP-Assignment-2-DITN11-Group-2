@@ -17,15 +17,44 @@
       #navigation{
         display: flex;
         margin: 0;
-        background: #f0ffff;
+        background: indigo;
         flex-flow: row wrap;
         justify-content: center;
         text-align: center;
-        color: silver;
+        color: #ADD8E6;
         padding: 1em;
         font-size: 80px;
         font-family: Gabriola;
         height: 50px;
+      }
+
+      #footer{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        background-color:navy;
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+
+      #footer li{
+        display: block;
+        color: #ADD8E6;
+        text-decoration: none;
+        padding: 1em;
+      }
+
+      @media all and(max-width: 1920px){
+        #footer{
+          justify-content: space-around;
+        }
+      }
+
+      @media all and (max-width:800px){
+        #footer{
+          flex-flow: column wrap;
+          padding: 0;
+        }
       }
 
 div {
@@ -98,5 +127,10 @@ img{
                             <div><a href="  ">Edit this template</a></div>
                           </div>
                           <picture><source media="(max-width: 400px)" srcset="  "></div>
+
+        <ul id="footer">
+          <li>Phone Number: +673 000 0000</li>
+          <li>Email: website@email.com</li>
+        </ul>
   </body>
 </html>

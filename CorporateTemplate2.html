@@ -12,6 +12,16 @@ git remote add origin https://github.com/Zaghloul22/BWEP-Assignment-2-DITN11-Gro
 git push -u origin main-->
 
 <style media="screen">
+
+body{
+  background-image: url(Website_Background.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+
   #content{
     height: 650px;
     width: 500px;
@@ -22,7 +32,7 @@ git push -u origin main-->
     padding: 0;
     margin: 0 auto;
     text-align: center;
-    padding-top:100px;
+    padding-top:70px;
   }
 
   p{
@@ -31,21 +41,16 @@ git push -u origin main-->
     font-family: Gabriola;
   }
 
-  #Company{
-    font-size: 60px;
-    font-family: Gabriola;
-    font-weight: bolder;
-  }
-
-  #Event, #Address, #Phone, #Email, #Website{
-    height: 50px;
+  #Event, #Address, #Phone, #Email, #Website, #Date, #Time{
+    height: 30px;
     width: 300px;
-    padding: 0;
     font-size: 30px;
     font-family: Garamond;
     margin: 0 auto;
     color: white;
   }
+
+  #Event{font-family:Lobster; font-weight: bolder;}
 
   input,textarea{
     background-color:#ADD8E6;
@@ -71,6 +76,8 @@ function ChangeMe(){
   var phone = document.getElementById("phone").value;
   var email = document.getElementById("email").value;
   var website = document.getElementById("website").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
 
   var box1 = document.getElementById("Event");
   box1.innerHTML = eventname;
@@ -82,13 +89,19 @@ function ChangeMe(){
   box4.innerHTML = email;
   var box5 = document.getElementById("Website");
   box5.innerHTML = website;
+  var box6 = document.getElementById("Date");
+  box6.innerHTML = date;
+  var box7 = document.getElementById("Time");
+  box5.innerHTML = time;
 
- if(eventname&&address&&phone&&email&&website){
+ if(eventname&&address&&phone&&email&&website&&date&&time){
   localStorage.setItem("Event:",eventname);
   localStorage.setItem("Corporate Address:",address);
   localStorage.setItem("Phone Number:",phone);
   localStorage.setItem("Corporate Email:",email);
   localStorage.setItem("Corporate Website:",website);
+  localStorage.setItem("Date:",date);
+  localStorage.setItem("Time:",time);
 }
   }
 </script>
@@ -102,14 +115,13 @@ function ChangeMe(){
         <p>Corporate Address</p>
         <div id="Address">Corporate 123 Street</div>
 
-        <p>Phone Number</p>
-        <div id="Phone">1234567</div>
+        <p>Date</p>
+        <div id="Date">DD:MM:YYYY</div>,
+        <div id="Time">00:00 ~ 23:59</div><br/>
 
-        <p>Email Address</p>
-        <div id="Email">Corporate@gmail.com</div>
-
-        <p>Company Website</p>
-        <div id="Website">www.Corporate.com</div>
+        <p id="Phone">1234567</p>
+        <p id="Email">Corporate@gmail.com</p>
+        <p id="Website">www.Corporate.com</p>
       </div>
     </div>
     <br/>
@@ -133,6 +145,16 @@ function ChangeMe(){
       <label>Website</label>
       <div class="drag1">
         <input id="website" type="url"/><br>
+      </div>
+
+      <label>Date</label>
+      <div class="drag1">
+        <input id="date" type=" date"/><br>
+      </div>
+
+      <label>Time</label>
+      <div class="drag1">
+        <input id="time" type="datetime-local"/><br>
       </div>
 
       <label>Address</label>
