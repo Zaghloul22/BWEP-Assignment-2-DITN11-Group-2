@@ -26,7 +26,6 @@ git push -u origin main-->
     font-size: 30px;
     display: block;
     text-align: center;
-
   }
 
   p{
@@ -34,9 +33,6 @@ git push -u origin main-->
     margin: 0 auto;
     text-align: center;
   }
-
-
-
 
   .drag2{
     height: 50px;
@@ -61,6 +57,7 @@ git push -u origin main-->
     font-size: 60px;
     padding-bottom: 100px;
   }
+  
 </style>
 
 <script>
@@ -81,6 +78,7 @@ function change(){
   localStorage.setItem("Date:",date);
 }
 </script>
+
   </head>
   <body>
     <div id="content">
@@ -93,23 +91,23 @@ function change(){
     </div>
 
     <form>
-    <label>Event name:</label>
-    <div class="drag1">
-      <input id="event1" type="text"><br>
-    </div>
+      <label>Event name:</label>
+      <div class="drag1">
+        <input id="event1" type="text"><br>
+      </div>
 
-    <label>Address</label>
-    <div  class="drag1">
-      <textarea id="address1"name="name" rows="3" cols="60"></textarea><br>
-    </div>
+      <label>Address</label>
+      <div  class="drag1">
+        <textarea id="address1"name="name" rows="3" cols="60"></textarea><br>
+      </div>
 
-    <label>Date:</label>
-    <div class="drag1">
-      <input id="date1"type="date"><br>
-    </div>
+      <label>Date:</label>
+      <div class="drag1">
+        <input id="date1"type="date"><br>
+      </div>
 
-    <button type="button" name="button" onclick="change()">Submit</button>
-  </form>
+      <button type="button" name="button" onclick="change()">Submit</button>
+    </form>
 
     <button type="button" name="button"><a href = "Assigment.html">Back</a></button>
   </body>
