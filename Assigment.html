@@ -21,7 +21,18 @@
     // }
     </script>
     <style media="screen">
-      #logo{
+    body{
+      background-image: url(Website_Background.jfif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    a{color: white;}
+
+      #logo, .social{
         width:100px;
         height:100px;
       }
@@ -30,7 +41,7 @@
         display: flex;
         list-style: none;
         margin: 0;
-        background: #f0ffff;
+        background: navy;
         flex-flow: row wrap;
         justify-content: center;
       }
@@ -38,7 +49,7 @@
       #navigation a{
         text-decoration: none;
         display: block;
-        color: silver;
+        color: #ADD8E6;
         padding: 1em;
       }
 
@@ -46,7 +57,7 @@
         display: flex;
         list-style: none;
         margin: 0 auto;
-        background: #f0ffff;
+        background: navy;
         flex-flow: row wrap;
         justify-content: center;
       }
@@ -56,10 +67,12 @@
         display: block;
         color: silver;
         padding: 1em;
+        background-color: navy;
       }
 
 div {
     display: block;
+    text-align: center;
 }
 
 .template-list {
@@ -82,12 +95,24 @@ main .template-list .template {
     break-inside: avoid;
     text-decoration: unset;
 }
+
+legend{
+  text-align: center;
+  font-size: 50px;
+
+}
+
+fieldset{
+  margin: 0 auto;
+  width: 400px;
+}
+
     </style>
 
   </head>
   <body>
     <ul id="navigation">
-      <a href=""> <img src="pb github.png" alt="" id="logo"/> </a>
+      <a href="pb githb.png"> <img src="pb github.png" alt="" id="logo"/> </a>
       <li><a href="">Home</a></li>
       <li><a href="#">Template</a></li>
       <li><a href="#">About</a></li>
@@ -96,10 +121,11 @@ main .template-list .template {
 
 
 
-
+  <fieldset>
+    <legend>Corporate</legend>
     <div class="template-list">
       <div>
-      <a href="">  <img src="corporate1.png" alt="Corporate 1" width="240px" height="300px" > </a>
+      <a href="Corporate.jpg">  <img src="Corporate.jpg" alt="Corporate 1" width="240px" height="300px" > </a>
         <div><a href="CorporateTemplate1.html">Edit this template</a></div>
       </div>
       <picture><source media="(max-width: 400px)" srcset="  ">
@@ -107,15 +133,18 @@ main .template-list .template {
 
         <div class="template-list">
           <div>
-          <a href="CorporateTemplate2.html">  <img src="Template.jpg" alt="Corporate 2" width="240px" height="300px" > </a>
+          <a href="Template.jpg">  <img src="Corporate2.jpg" alt="Corporate 2" width="240px" height="300px" > </a>
             <div><a href="CorporateTemplate2.html">Edit this template</a></div>
           </div>
           <picture><source media="(max-width: 400px)" srcset="  ">
           </div>
+        </fieldset>
 
+        <fieldset>
+          <legend>Formal</legend>
             <div class="template-list">
               <div>
-              <a href="">  <img src="formal2.png" alt="Formal 2" width="240px" height="300px" > </a>
+              <a href="">  <img src="formal2.png" alt="Formal 1" width="240px" height="300px" > </a>
                 <div><a href="  ">Edit this template</a></div>
               </div>
               <picture><source media="(max-width: 400px)" srcset="  ">
@@ -128,7 +157,10 @@ main .template-list .template {
                   </div>
                   <picture><source media="(max-width: 400px)" srcset="  ">
                   </div>
+                </fieldset>
 
+                <fieldset>
+                  <legend>Informal</legend>
                     <div class="template-list">
                       <div>
                       <a href="InformalTemplate.html">  <img src="informal1.jpg" alt="Informal 1" width="240px" height="300px" > </a>
@@ -145,6 +177,7 @@ main .template-list .template {
                           <picture><source media="(max-width: 400px)" srcset="  ">
                           </div>
                           <div class="template-list">
+                          </fieldset>
 
 
 
@@ -152,9 +185,8 @@ main .template-list .template {
                               <li><a href="#">Help</a></li>
                               <li><a href="#">FAQ</a></li>
                               <li><a href="#">Contact Us</a></li>
-                              <li><img src="" alt=""/><a href="https://www.facebook.com/"/></a></li>
-                              <li><img src="" alt=""/><a href="http://www.twitter.com/"/></a></li>
-                              <li><img src="" alt=""/><a href="http://www.twitter.com/"/></a></li>
+                              <li><img src="facebook.webp" alt="" class="social"/><a href="https://www.facebook.com/"/></a></li>
+                              <li><img src="twitter.png" alt="" class="social"/><a href="http://www.twitter.com/"/></a></li>
                             </div>
   </body>
 </html>
