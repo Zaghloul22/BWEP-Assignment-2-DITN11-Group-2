@@ -69,12 +69,22 @@ body{
 </style>
 
 <script>
-function change(){
+
   var eventname = document.getElementById("event1").value;
   var address = document.getElementById("address1").value;
   var date = document.getElementById("date1").value;
   var time = document.getElementById("time1").value;
 
+function change(){
+  var box1 = document.getElementById("event2");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("address2");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("date2");
+  box3.innerHTML = date;
+}
+
+function Save(){
   var box1 = document.getElementById("event2");
   box1.innerHTML = eventname;
   var box2 = document.getElementById("address2");
@@ -87,6 +97,15 @@ function change(){
   localStorage.setItem("Corporate Address:",address);
   localStorage.setItem("Date:",date);
 }
+}
+
+function Remove(){
+  if(eventname&&address&&date){}
+  else {
+    localStorage.removeItem("Event:",eventname);
+    localStorage.removeItem("Corporate Address:",address);
+    localStorage.removeItem("Date:",date);
+  }
 }
 </script>
 
@@ -118,7 +137,9 @@ function change(){
         <input id="date1" type="datetime-local"/><br>
       </div>
 
+      <button type="button" name="button" onclick="Save()">Save As Favourite</button>
       <button type="button" name="button" onclick="change()">Submit</button>
+      <button type="button" name="button" onclick="Remove()">Delete</button>
     </form>
 
   </body>

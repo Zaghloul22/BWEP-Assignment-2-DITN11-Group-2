@@ -62,7 +62,6 @@ body{
 </style>
 
 <script>
-function ChangeMe(){
   var eventname = document.getElementById("eventname").value;
   var address = document.getElementById("address").value;
   var phone = document.getElementById("phone").value;
@@ -70,6 +69,22 @@ function ChangeMe(){
   var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
 
+function ChangeMe(),{
+  var box1 = document.getElementById("Event");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("Address");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("Phone");
+  box3.innerHTML = phone;
+  var box4 = document.getElementById("Email");
+  box4.innerHTML = email;
+  var box5 = document.getElementById("Website");
+  box5.innerHTML = website;
+  var box6 = document.getElementById("Date");
+  box6.innerHTML = date;
+}
+
+function Save(){
   var box1 = document.getElementById("Event");
   box1.innerHTML = eventname;
   var box2 = document.getElementById("Address");
@@ -91,6 +106,19 @@ function ChangeMe(){
   localStorage.setItem("Corporate Website:",website);
   localStorage.setItem("Date:",date);
 }
+
+function Remove() {
+  if(eventname&&address&&phone&&email&&website&&date){}
+  else {
+    localStorage.removeItem("Event:",eventname);
+    localStorage.removeItem("Corporate Address:",address);
+    localStorage.removeItem("Phone Number:",phone);
+    localStorage.removeItem("Corporate Email:",email);
+    localStorage.removeItem("Corporate Website:",website);
+    localStorage.removeItem("Date:",date);
+  }
+}
+
   }
 </script>
   </head>
@@ -145,7 +173,9 @@ function ChangeMe(){
         <textarea id="address" name="name" rows="8" cols="80"></textarea><br>
       </div>
 
+      <button type="button" name="button" onclick="Save()">Save As Favourite</button>
       <button type="button" name="button" onclick="ChangeMe()">Submit</button>
+      <button type="button" name="button" onclick="Remove()">Delete</button>
   </form>
 
   </body>
