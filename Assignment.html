@@ -2,73 +2,78 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Template Editor</title>
-    <!--echo "# BWEP-Assignment-2-DITN11-Grop-2" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Zaghloul22/BWEP-Assignment-2-DITN11-Group-2.git
-git push -u origin main-->
+    <title>Ecard</title>
+    <script type="text/javascript">
+    // function changeMe(){
+    //   var userInput, myBox;
+    //   userInput = document.getElementById("user-text").value;
+    //   myBox = document.getElementById("box");
+    //   myBox.innerHTML = userInput
+    //
+    //   if(userInput=="magenta"){
+    //     myBox.style.backgroundColor="magenta";
+    //   } else if(userInput=="hijau"){
+    //     myBox.style.backgroundColor="lightgreen";
+    //   }else {
+    //     myBox.style.backgroundColor="white";
+    //   }
+    //
+    // }
+    </script>
     <style media="screen">
+    body{
+      background-image: url(Website_Background.jfif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-      body{
-        background-image: url(Website_Background.jfif);
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0 auto;
-        background-position: center;
-        background-attachment: fixed;
+    a{color: white;}
+
+      #logo, .social{
+        width:100px;
+        height:100px;
       }
 
       #navigation{
         display: flex;
+        list-style: none;
         margin: 0;
-        background: indigo;
+        background: navy;
         flex-flow: row wrap;
         justify-content: center;
-        text-align: center;
+      }
+
+      #navigation a{
+        text-decoration: none;
+        display: block;
         color: #ADD8E6;
         padding: 1em;
-        font-size: 80px;
-        font-family: Gabriola;
-        height: 50px;
       }
 
       #footer{
         display: flex;
         list-style: none;
-        margin: 0;
-        background-color:navy;
+        margin: 0 auto;
+        background: navy;
         flex-flow: row wrap;
         justify-content: center;
       }
 
-      #footer li{
-        display: block;
-        color: #ADD8E6;
+      #footer a{
         text-decoration: none;
+        display: block;
+        color: silver;
         padding: 1em;
-      }
-
-      @media all and(max-width: 1920px){
-        #footer{
-          justify-content: space-around;
-        }
-      }
-
-      @media all and (max-width:800px){
-        #footer{
-          flex-flow: column wrap;
-          padding: 0;
-        }
+        background-color: navy;
       }
 
 div {
     display: block;
     text-align: center;
 }
-a{color: white;}
 
 .template-list {
     display: flex;
@@ -76,85 +81,112 @@ a{color: white;}
     justify-content: center;
     margin: 40px 0;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: left;
 }
-
-img{
-  height: 400px;
+main .template-list .template {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 32px;
+    justify-content: flex-end;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-decoration: unset;
 }
 
 legend{
   text-align: center;
   font-size: 50px;
-  color: White;
+
 }
+
 fieldset{
   margin: 0 auto;
   width: 400px;
 }
+
     </style>
 
   </head>
   <body>
-    <div id="navigation">
-      E-INVITATION CARD EDITOR
-    </div>
+    <ul id="navigation">
+      <a href="pb githb.png"> <img src="pb github.png" alt="" id="logo"/> </a>
+      <li><a href="">Home</a></li>
+      <li><a href="#">Template</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Create your own template</a></li>
+    </ul>
 
-<fieldset>
-  <legend>Corporate</legend>
+
+
+  <fieldset>
+    <legend>Corporate</legend>
     <div class="template-list">
       <div>
-      <div><picture><source media="(max-width: 400px)" srcset="CorporateTemplate1.html"><img src="Corporate.jpg" alt="Corporate 1" ></picture></div>
+      <a href="Corporate.jpg">  <img src="Corporate.jpg" alt="Corporate 1" width="240px" height="300px" > </a>
         <div><a href="CorporateTemplate1.html">Edit this template</a></div>
       </div>
-      <picture><source media="(max-width: 400px)" srcset="Corporate.jpg"></div>
+      <picture><source media="(max-width: 400px)" srcset="  ">
+      </div>
 
         <div class="template-list">
           <div>
-          <div><picture><source media="(max-width: 400px)" srcset=" "><img src="Corporate2.jpg" alt="Corporate 2" ></source></picture></div>
+          <a href="Template.jpg">  <img src="Corporate2.jpg" alt="Corporate 2" width="240px" height="300px" > </a>
             <div><a href="CorporateTemplate2.html">Edit this template</a></div>
           </div>
-          <picture><source media="(max-width: 400px)" srcset="  "></div>
-  </fieldset>
+          <picture><source media="(max-width: 400px)" srcset="  ">
+          </div>
+        </fieldset>
 
         <fieldset>
           <legend>Formal</legend>
             <div class="template-list">
               <div>
-              <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Formal 1" ></picture></div>
+              <a href="">  <img src="formal2.png" alt="Formal 1" width="240px" height="300px" > </a>
                 <div><a href="  ">Edit this template</a></div>
               </div>
-              <picture><source media="(max-width: 400px)" srcset="  "></div>
+              <picture><source media="(max-width: 400px)" srcset="  ">
+              </div>
 
                 <div class="template-list">
                   <div>
-                  <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Formal 2" ></picture></div>
+                  <a href="">  <img src="formal2.png" alt="Formal 2" width="240px" height="300px" > </a>
                     <div><a href="  ">Edit this template</a></div>
                   </div>
-                  <picture><source media="(max-width: 400px)" srcset="  "></div>
-              </fieldset>
+                  <picture><source media="(max-width: 400px)" srcset="  ">
+                  </div>
+                </fieldset>
 
                 <fieldset>
                   <legend>Informal</legend>
                     <div class="template-list">
                       <div>
-                      <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Informal 1" ></picture></div>
-                        <div><a href="  ">Edit this template</a></div>
+                      <a href="InformalTemplate.html">  <img src="informal1.jpg" alt="Informal 1" width="240px" height="300px" > </a>
+                        <div><a href="InformalTemplate.html">Edit this template</a></div>
                       </div>
-                      <picture><source media="(max-width: 400px)" srcset="  "></div>
+                      <picture><source media="(max-width: 400px)" srcset="">
+                      </div>
 
                         <div class="template-list">
                           <div>
-                          <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Informal 2" ></picture></div>
-                            <div><a href="  ">Edit this template</a></div>
+                           <a href="">  <img src="informal2.png" alt="Informal 2" width="240px" height="300px" > </a>
+                            <div><a href="InformalTemplate2.html">Edit this template</a></div>
                           </div>
-                          <picture><source media="(max-width: 400px)" srcset="  "></div>
+                          <picture><source media="(max-width: 400px)" srcset="  ">
+                          </div>
+                          <div class="template-list">
                           </fieldset>
 
-        <ul id="footer">
-          <li>Phone Number: +673 000 0000</li>
-          <li>Email: website@email.com</li>
-        </ul>
+
+
+                            <div id="footer">
+                              <li><a href="#">Help</a></li>
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                              <li><img src="facebook.webp" alt="" class="social"/><a href="https://www.facebook.com/"/></a></li>
+                              <li><img src="twitter.png" alt="" class="social"/><a href="http://www.twitter.com/"/></a></li>
+                            </div>
   </body>
 </html>
