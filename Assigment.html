@@ -3,6 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Ecard</title>
+    <script type="text/javascript">
+    function changeMe(){
+      var userInput, myBox;
+      userInput = document.getElementById("user-text").value;
+      myBox = document.getElementById("box");
+      myBox.innerHTML = userInput
+
+      if(userInput=="magenta"){
+        myBox.style.backgroundColor="magenta";
+      } else if(userInput=="hijau"){
+        myBox.style.backgroundColor="lightgreen";
+      }else {
+        myBox.style.backgroundColor="white";
+      }
+
+    }
+    </script>
     <style media="screen">
       #logo{
         width:100px;
@@ -86,7 +103,7 @@ div {
         <div class="template-list">
           <div>
           <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Corporate 2" ></picture></div>
-            <div><a href="file:///C:/Users/Miejul/OneDrive%20-%20Politeknik%20Brunei/Documents/GitHub/BWEP-Assignment-2-DITN11-Group-2/CorporateTemplate2.html">Edit this template</a></div>
+            <div><a href="CorporateTemplate2.html">Edit this template</a></div>
           </div>
           <picture><source media="(max-width: 400px)" srcset="  "></div>
 
@@ -107,14 +124,14 @@ div {
                     <div class="template-list">
                       <div>
                       <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Informal 1" ></picture></div>
-                        <div><a href="  ">Edit this template</a></div>
+                        <div><a href="InformalTemplate.html">Edit this template</a></div>
                       </div>
                       <picture><source media="(max-width: 400px)" srcset="  "></div>
 
                         <div class="template-list">
                           <div>
                           <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Informal 2" ></picture></div>
-                            <div><a href="  ">Edit this template</a></div>
+                            <div><a href="InformalTemplate2.html">Edit this template</a></div>
                           </div>
                           <picture><source media="(max-width: 400px)" srcset="  "></div>
   </body>
