@@ -4,21 +4,21 @@
     <meta charset="utf-8">
     <title>Ecard</title>
     <script type="text/javascript">
-    function changeMe(){
-      var userInput, myBox;
-      userInput = document.getElementById("user-text").value;
-      myBox = document.getElementById("box");
-      myBox.innerHTML = userInput
-
-      if(userInput=="magenta"){
-        myBox.style.backgroundColor="magenta";
-      } else if(userInput=="hijau"){
-        myBox.style.backgroundColor="lightgreen";
-      }else {
-        myBox.style.backgroundColor="white";
-      }
-
-    }
+    // function changeMe(){
+    //   var userInput, myBox;
+    //   userInput = document.getElementById("user-text").value;
+    //   myBox = document.getElementById("box");
+    //   myBox.innerHTML = userInput
+    //
+    //   if(userInput=="magenta"){
+    //     myBox.style.backgroundColor="magenta";
+    //   } else if(userInput=="hijau"){
+    //     myBox.style.backgroundColor="lightgreen";
+    //   }else {
+    //     myBox.style.backgroundColor="white";
+    //   }
+    //
+    // }
     </script>
     <style media="screen">
       #logo{
@@ -71,6 +71,17 @@ div {
     font-weight: 700;
     text-align: left;
 }
+main .template-list .template {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 32px;
+    justify-content: flex-end;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-decoration: unset;
+}
     </style>
 
   </head>
@@ -88,46 +99,52 @@ div {
 
     <div class="template-list">
       <div>
-      <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Corporate 1" ></picture></div>
+      <div><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Corporate 1" ></div>
         <div><a href="CorporateTemplate1.html">Edit this template</a></div>
       </div>
-      <picture><source media="(max-width: 400px)" srcset="  "></div>
+      <picture><source media="(max-width: 400px)" srcset="  ">
+      </div>
 
         <div class="template-list">
           <div>
-          <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Corporate 2" ></picture></div>
+          <a href="CorporateTemplate2.html">  <img src="Template.jpg" alt="Corporate 2" width="240px" height="300px" > </a>
             <div><a href="CorporateTemplate2.html">Edit this template</a></div>
           </div>
-          <picture><source media="(max-width: 400px)" srcset="  "></div>
+          <picture><source media="(max-width: 400px)" srcset="  ">
+          </div>
 
             <div class="template-list">
               <div>
-              <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Formal 1" ></picture></div>
+              <a href="">  <img src="formal2.png" alt="formal 2" width="240px" height="300px" > </a>
                 <div><a href="  ">Edit this template</a></div>
               </div>
-              <picture><source media="(max-width: 400px)" srcset="  "></div>
+              <picture><source media="(max-width: 400px)" srcset="  ">
+              </div>
 
                 <div class="template-list">
                   <div>
-                  <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Formal 2" ></picture></div>
+                  <a href="">  <img src="formal2.png" alt="formal 2" width="240px" height="300px" > </a>
                     <div><a href="  ">Edit this template</a></div>
                   </div>
-                  <picture><source media="(max-width: 400px)" srcset="  "></div>
+                  <picture><source media="(max-width: 400px)" srcset="  ">
+                  </div>
 
                     <div class="template-list">
                       <div>
-                      <div><picture><source media="(max-width: 400px)" srcset="  "><img src="informal1.jpg" alt="Informal 1" ></picture></div>
+                      <a href="InformalTemplate.html">  <img src="informal1.jpg" alt="informal 1" width="240px" height="300px" > </a>
                         <div><a href="InformalTemplate.html">Edit this template</a></div>
                       </div>
-                      <picture><source media="(max-width: 400px)" srcset="  "></div>
+                      <picture><source media="(max-width: 400px)" srcset="">
+                      </div>
 
                         <div class="template-list">
                           <div>
-                          <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Informal 2" ></picture></div>
+                           <a href="">  <img src="informal2.png" alt="informal 2" width="240px" height="300px" > </a>
                             <div><a href="InformalTemplate2.html">Edit this template</a></div>
                           </div>
-                          <picture><source media="(max-width: 400px)" srcset="  "></div>
-
+                          <picture><source media="(max-width: 400px)" srcset="  ">
+                          </div>
+                          <div class="template-list">
 
 
 
