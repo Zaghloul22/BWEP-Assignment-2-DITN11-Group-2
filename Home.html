@@ -3,8 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Home</title>
+    <script type="text/javascript">
+    // function changeMe(){
+    //   var userInput, myBox;
+    //   userInput = document.getElementById("user-text").value;
+    //   myBox = document.getElementById("box");
+    //   myBox.innerHTML = userInput
+    //
+    //   if(userInput=="magenta"){
+    //     myBox.style.backgroundColor="magenta";
+    //   } else if(userInput=="hijau"){
+    //     myBox.style.backgroundColor="lightgreen";
+    //   }else {
+    //     myBox.style.backgroundColor="white";
+    //   }
+    //
+    // }
+    </script>
     <style media="screen">
-      #logo{
+    body{
+      background-image: url(Website_Background.jfif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    a{color: white;}
+
+      #logo, .social{
         width:100px;
         height:100px;
       }
@@ -13,7 +41,7 @@
         display: flex;
         list-style: none;
         margin: 0;
-        background: #f0ffff;
+        background: navy;
         flex-flow: row wrap;
         justify-content: center;
       }
@@ -21,15 +49,27 @@
       #navigation a{
         text-decoration: none;
         display: block;
-        color: silver;
+        color: #ADD8E6;
         padding: 1em;
       }
 
+      #footer{
+        display: flex;
+        list-style: none;
+        margin: 0 auto;
+        background: navy;
+        flex-flow: row wrap;
+        justify-content: center;
+        bottom: 100px;
+      }
 
-
-div {
-    display: block;
-}
+      #footer a{
+        text-decoration: none;
+        display: block;
+        color: silver;
+        padding: 1em;
+        background-color: navy;
+      }
 
 .template-list {
     display: flex;
@@ -40,60 +80,52 @@ div {
     font-weight: 700;
     text-align: left;
 }
+
+
+legend{
+  text-align: center;
+  font-size: 50px;
+  color:white;
+
+}
+
+fieldset{
+  margin: 0 auto;
+  width: 500px;
+  height: 600px;
+  display: block;
+  background-color:navy;
+  color: #ADD8E6;
+  border: 5px solid ;
+  opacity: 0.6;
+}
+
     </style>
 
   </head>
   <body>
     <ul id="navigation">
-      <img src="PB Secondary Logo.png" alt="" id="logo"/>
-      <li><b>Home<b></li>
-      <li><a href="Assigment.html">Template</a></li>
+      <a href="pb githb.png"> <img src="pb github.png" alt="" id="logo"/> </a>
+      <li><a href="#">Home</a></li>
+      <li><a href="Assignment.html">Template</a></li>
       <li><a href="AboutUs.html">About</a></li>
-      <li><a href="Contact.html">Contact Us</a></li>
     </ul>
 
 
 
-    <div class="template-list">
-      <div>
-      <div><picture><source media="(max-width: 400px)" srcset="CorporateTemplate1.html"><img src="CorporateTemplate1.html" alt="Corporate 1" ></picture></div>
-        <div><a href="CorporateTemplate1.html">Edit this template</a></div>
-      </div>
-      <picture><source media="(max-width: 400px)" srcset="  "></div>
+  <fieldset>
+    <legend>About</legend>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </fieldset>
 
-        <div class="template-list">
-          <div>
-          <div><picture><source media="(max-width: 400px)" srcset=" "><img src=" " alt="Corporate 2" ></picture></div>
-            <div><a href="CorporateTemplate2.html">Edit this template</a></div>
-          </div>
-          <picture><source media="(max-width: 400px)" srcset="  "></div>
 
-            <div class="template-list">
-              <div>
-              <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Formal 1" ></picture></div>
-                <div><a href="  ">Edit this template</a></div>
-              </div>
-              <picture><source media="(max-width: 400px)" srcset="  "></div>
 
-                <div class="template-list">
-                  <div>
-                  <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Formal 2" ></picture></div>
-                    <div><a href="  ">Edit this template</a></div>
-                  </div>
-                  <picture><source media="(max-width: 400px)" srcset="  "></div>
-
-                    <div class="template-list">
-                      <div>
-                      <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Informal 1" ></picture></div>
-                        <div><a href="  ">Edit this template</a></div>
-                      </div>
-                      <picture><source media="(max-width: 400px)" srcset="  "></div>
-
-                        <div class="template-list">
-                          <div>
-                          <div><picture><source media="(max-width: 400px)" srcset="  "><img src="  " alt="Informal 2" ></picture></div>
-                            <div><a href="  ">Edit this template</a></div>
-                          </div>
-                          <picture><source media="(max-width: 400px)" srcset="  "></div>
+                            <div id="footer">
+                              <li><a href="#">Help</a></li>
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                              <li><img src="facebook.webp" alt="" class="social"/><a href="https://www.facebook.com/"/></a></li>
+                              <li><img src="twitter.png" alt="" class="social"/><a href="http://www.twitter.com/"/></a></li>
+                            </div>
   </body>
 </html>
