@@ -58,53 +58,80 @@ body{
 
   #event2{
     font-size: 60px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 
   input,textarea{
     background-color:#ADD8E6;
-    color: white;
+    color: black;
   }
 
 </style>
 
 <script>
 
+  function Change(){
+    var eventname = document.getElementById("event1").value;
+    var address = document.getElementById("address1").value;
+    var date = document.getElementById("date1").value;
+    var time = document.getElementById("time1").value;
+    var finish = document.getElementById("endtime1").value;
+
+  var box1 = document.getElementById("event2");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("address2");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("date2");
+  box3.innerHTML = date;
+  var box4 = document.getElementById("time2");
+  box4.innerHTML = time;
+  var box5 = document.getElementById("endtime");
+  box5.innerHTML = finish;
+}
+
+function Save(){
   var eventname = document.getElementById("event1").value;
   var address = document.getElementById("address1").value;
   var date = document.getElementById("date1").value;
   var time = document.getElementById("time1").value;
+  var finish = document.getElementById("endtime1").value;
 
-function change(){
+
   var box1 = document.getElementById("event2");
   box1.innerHTML = eventname;
   var box2 = document.getElementById("address2");
   box2.innerHTML = address;
   var box3 = document.getElementById("date2");
   box3.innerHTML = date;
-}
+  var box4 = document.getElementById("time2");
+  box4.innerHTML = time;
+  var box5 = document.getElementById("endtime");
+  box5.innerHTML = finish;
 
-function Save(){
-  var box1 = document.getElementById("event2");
-  box1.innerHTML = eventname;
-  var box2 = document.getElementById("address2");
-  box2.innerHTML = address;
-  var box3 = document.getElementById("date2");
-  box3.innerHTML = date;
-
-  if(eventname&&address&&date){
+  if(eventname&&address&&date&&time&&finish){
   localStorage.setItem("Event:",eventname);
   localStorage.setItem("Corporate Address:",address);
   localStorage.setItem("Date:",date);
+  localStorage.setItem("From:",time);
+  localStorage.setItem("To:",finish);
 }
 }
 
 function Remove(){
-  if(eventname&&address&&date){}
+  var eventname = document.getElementById("event1").value;
+  var address = document.getElementById("address1").value;
+  var date = document.getElementById("date1").value;
+  var time = document.getElementById("time1").value;
+  var time = document.getElementById("time1").value;
+  var finish = document.getElementById("endtime1").value;
+
+  if(eventname&&address&&date&&time&&finish){}
   else {
     localStorage.removeItem("Event:",eventname);
     localStorage.removeItem("Corporate Address:",address);
     localStorage.removeItem("Date:",date);
+    localStorage.removeItem("From:",time);
+    localStorage.removeItem("To:",finish);
   }
 }
 </script>
@@ -118,7 +145,8 @@ function Remove(){
         <p>Location Address</p>
         <div class="drag2" id="address2">Corporate, floor 5</div>
         <p>Date & Time</p>
-        <div class="drag2" id="date2">day/month/year, 00:00 ~ 23:59</div>
+        <div class="drag2" id="date2">day/month/year,</div>
+        <p class="drag2" id="time2">00:00</p>~<p class="drag2" id="endtime">23:59</p>
     </div>
 
     <form>
@@ -132,13 +160,23 @@ function Remove(){
         <textarea id="address1"name="name" rows="3" cols="60"></textarea><br>
       </div>
 
-      <label>Date & Time</label>
+      <label>Date</label>
       <div class="drag1">
-        <input id="date1" type="datetime-local"/><br>
+        <input id="date1" type="date"/><br>
+      </div>
+
+      <label>Start Time</label>
+      <div class="drag1">
+        <input id="time1" type="time"/><br>
+      </div>
+
+      <label>Finish Time</label>
+      <div class="drag1">
+        <input id="endtime1" type="time"/><br>
       </div>
 
       <button type="button" name="button" onclick="Save()">Save As Favourite</button>
-      <button type="button" name="button" onclick="change()">Submit</button>
+      <button type="button" name="button" onclick="Change()">Submit</button>
       <button type="button" name="button" onclick="Remove()">Delete</button>
     </form>
 
