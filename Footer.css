@@ -1,20 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-.content1{
-  position: relative;
-  margin: 130px auto;
-  text-align: center;
-  padding: 0 20px;
-}
-.content1 .text{
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #193A6F;
-}
-.content1 .p{
-  font-size: 2.1875rem;
-  font-weight: 600;
-  color: #193A6F;
-}
 footer{
   bottom: 0px;
   width: 100%;
@@ -59,12 +43,6 @@ footer{
 }
 .left .content p{
   text-align: justify;
-}
-.left .content .social{
-  margin: 20px 0 0 0;
-}
-.left .content .social a{
-  padding: 0 2px;
 }
 .left .content .social a span{
   height: 40px;
