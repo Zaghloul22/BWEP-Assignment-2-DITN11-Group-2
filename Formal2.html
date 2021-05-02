@@ -7,45 +7,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Girassol&display=swap" rel="stylesheet">
 <style media="screen">
 
+body{
+  background-image: url(Website_Background.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/*Positioning for husband and bride textarea*/
   #content{
-    padding-top: 100px;
     background-image: url("Formal2.jpg");
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 0px auto;
-    margin: 0px auto;
-    text-align: center;
-    align-content: center;
-    height: 800px;
-    width: 700px;
-    position: inherit;
-    float: inherit;
-    line-height: 81px;
+    allign-items: center;
+    padding: 70px;
+    margin: 0 auto;
+    height: 700px;
+    width: 500px;
     display: block;
-
-      /*This section is for dragging box*/
-     padding: 60px;
-     cursor: move;
-     z-index: 10;
-     color: #fff;
-
+    background-repeat: no-repeat;
+    text-align: center;
   }
 
+
+
+/*Husband and Bride name font and text properties*/
   .host{
-    font-size: 38px;
+    font-size: 45px;
     font-family: 'Dancing Script', cursive;
     font-weight: bolder;
     padding: 0px auto;
     text-align: center;
     background: none;
     border: 2px dotted transparent;
+    /*To prevent textarea resize and fixed size*/
+    resize: none;
   }
 
+/*Font and text proporties for content or information*/
   .info{
-    padding: 0px auto;
-    margin: 0px auto;
-    font-size: 20px;
+    padding: 0;
+    font-size: 22px;
     font-family: 'Girassol', cursive;
     font-weight: normal;
     text-align: center;
@@ -53,48 +56,50 @@
     border: 2px dotted transparent;
   }
 
+/*Positioning for content or information*/
   #info{
-    margin: 250px;
-    padding: 250px;
     text-align: center;
     allign-content: center;
-    position: inherit;
-    float: inherit;
-    /*This section is for dragging box*/
-   padding: 60px;
-   cursor: move;
-   z-index: 10;
-   color: #fff;
-   line-height: 81px;
+    padding-bottom: 500px;
   }
 
-/*This section is for dragging box*/
-
-  #firstbox {
-    position: absolute;
-    z-index: 9;
-    background-color: #f1f1f1;
-    border: 1px solid #d3d3d3;
+  #button{
     text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
   }
 
-  #secondbox{
-    position: absolute;
-    z-index: 9;
-    background-color: #f1f1f1;
-    border: 1px solid #d3d3d3;
-    text-align: center;
+/*Get rid of scroll wheel and resize for textarea*/
+  textarea{
+    overflow: hidden;
+/*To center text area and position it vertically*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
   }
 
+/*Making placeholder dissapear when type*/
+  textarea:focus::placeholder {
+  color: transparent;
+}
 
+p{
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: 'Dancing Script', cursive;
+  padding: 0;
+  text-align: center;
+}
 
-
-
-
-
-
-
-
+/*To give space in each text area in the div element*/
+div{
+  white-space: pre;
+}
 
 
 </style>
@@ -103,20 +108,20 @@
 
     <div id="firstbox">
       <div id="content">
-        <textarea class="host" placeholder="Enter bride & husband name" ></textarea>
-      </div>
-    </div>
-
-
-    <div id="secondbox">
-      <div id="info">
-        <textarea class="info" placeholder="Invite you to their wedding" ></textarea>
+        <textarea class="host" placeholder="Enter Husband's name & Bride's name" style="overflow:hidden;" ></textarea>
+        <textarea class="info" placeholder="What do you want to say?" ></textarea>
         <textarea class="info" placeholder="Enter Date & Time" ></textarea>
         <textarea class="info" placeholder="Enter Address" ></textarea>
       </div>
     </div>
 
-
+    <div>
+      <div id="button">
+        <button type="button">Save as Favourite</button>
+        <button type="button">Delete</button>
+        <button type="button">Submit</button>
+      </div>
+    </div>
 
 
 
