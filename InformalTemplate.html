@@ -13,51 +13,71 @@ body{
   background-position: center;
   background-attachment: fixed;
 }
-  div{
-    height: 825px;
-    width: 600px;
+
+  .picture{
+    height: 700px;
+    width: 500px;
     background-image: url(informal1.jpg);
     background-size: contain;
-    background-repeat: no-repeat;
-    color: blue;
+    align-items: center;
+    display: block;
     padding: 0;
     margin: 0 auto;
-    text-align: center;
-    font-family: Gabriola;
-    font-weight: bolder;
   }
 
-  #content{
-    padding-top:150px;
-  }
 
-  p{
-    padding: 0;
-    font-size: 20px;
-    font-family: Gabriola;
-    font-weight: bolder;
-  }
+  .content{
+        padding-top: 100px;
+        padding: 0px auto;
+        margin: 0px auto;
+        text-align: center;
+        align-content: center;
+        height: 800px;
+        width: 700px;
+        position: relative;
+        float: inherit;
+      }
 
-  .text{
-    font-size: 30px;
-    color: blue;
-    text-align: center;
-    border: 2px dotted transparent;
-    background: none;
-    font-family: Gabriola;
-    font-weight: bolder;
-  }
+      #recepient{
+        font-size: 20px;
+        font-family: 'Alex Brush', cursive;
+        font-weight: normal;
+        padding: 0px auto;
+      }
 
-</style>
-  </head>
-  <body>
-    <div>
-      <div id="content">
-      <textarea class="text" placeholder="Enter name" ></textarea>
-      <p>Invite you to</p>
-      <textarea class="text" placeholder="Event"></textarea>
+      p{
+        margin-bottom: 0 px auto;
+        padding: 0px auto;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        line-height: 81px;
+      }
 
+
+
+      </style>
+    </head>
+    <body>
+
+      <div class="picture">
+        <div class ="content">
+        <p> You are invited to</p>
+        <p>The wedding of</p>
+        <p id="recepient">Bride's name & Husband's name</p>
+        <p>Date</p>
+        <p>Time</p>
+        <p>Address</p>
+
+
+
+
+
+
+
+      </div>
     </div>
-    </div>
-  </body>
+
+    </body>
 </html>
