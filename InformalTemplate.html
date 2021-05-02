@@ -2,8 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Informal E-Invitation 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
+    <title>Informal Template 2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Parisienne">
 <style media="screen">
 body{
   background-image: url(Website_Background.jfif);
@@ -15,8 +19,8 @@ body{
 }
 
   .picture{
-    height: 700px;
-    width: 500px;
+    height: 698px;
+    width: 465px;
     background-image: url(informal1.jpg);
     background-size: contain;
     align-items: center;
@@ -25,59 +29,166 @@ body{
     margin: 0 auto;
   }
 
-
   .content{
-        padding-top: 100px;
-        padding: 0px auto;
-        margin: 0px auto;
-        text-align: center;
-        align-content: center;
-        height: 800px;
-        width: 700px;
-        position: relative;
-        float: inherit;
-      }
+    color: magenta;
+    font-family: "parisienne";
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    top: 100px;
+  }
 
-      #recepient{
-        font-size: 20px;
-        font-family: 'Alex Brush', cursive;
-        font-weight: normal;
-        padding: 0px auto;
-      }
+  form{
+      width: 600px;
+      text-align: center;
+      padding: 0;
+      margin: 0 auto;
+      border: 2px solid black;
+      display: block;
+      background-color: #2c3e50;
+  }
 
-      p{
-        margin-bottom: 0 px auto;
-        padding: 0px auto;
-        font-size: 20px;
-        font-family: 'Lato', sans-serif;
-        font-weight: bold;
-        text-align: center;
-        line-height: 81px;
-      }
+  button{margin: 0 auto;}
 
 
+  input,textarea{
+    background-color:transparent;
+    color: white;
+  }
 
-      </style>
-    </head>
-    <body>
+  #Event{
+    text-align: center;
+    display: block;
+    margin: 5px;
+    position: relative;
+    font-size: 30px;
+  }
 
-      <!-- <div class="picture">
-        <div class ="content">
-        <p> You are invited to</p>
-        <p>The wedding of</p>
-        <p id="recepient">Bride's name & Husband's name</p>
-        <p>Date</p>
-        <p>Time</p>
-        <p>Address</p> -->
+  #Date{
+    text-align: center;
+    display: block;
+    margin: 5px;
+    top: 50px;
+    position: relative;
+  }
+
+  #Address{
+    width: 465px;
+    text-align: center;
+    display: block;
+    margin: 5px;
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+    justify-content: center;
+  }
 
 
 
+</style>
+
+<script>
+function ChangeMe(){
+  var eventname = document.getElementById("eventname").value;
+  var address = document.getElementById("address").value;
+  var date = document.getElementById("date").value;
+
+  var box1 = document.getElementById("Event");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("Address");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("Website");
+  box3.innerHTML = website;
+  var box4 = document.getElementById("Date");
+  box4.innerHTML = date;
+}
+
+function Save(){
+  var eventname = document.getElementById("eventname").value;
+  var address = document.getElementById("address").value;
+  var date = document.getElementById("date").value;
+
+  var box1 = document.getElementById("Event");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("Address");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("Date");
+  box3.innerHTML = date;
+
+ if(eventname&&address&&date){
+  localStorage.setItem("Event:",eventname);
+  localStorage.setItem("Address:",address);
+  localStorage.setItem("Date:",date);
+}
+
+function Remove() {
+  var eventname = document.getElementById("eventname").value;
+  var address = document.getElementById("address").value;
+  var date = document.getElementById("date").value;
+
+  if(eventname&&address&&date){}
+  else {
+    localStorage.removeItem("Event:",eventname);
+    localStorage.removeItem("Event Address:",address);
+    localStorage.removeItem("Date:",date);
+  }
+}
+
+  }
+</script>
+
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">E-Card Maker</label>
+      <ul>
+        <li><a href="Assignment.html">Home</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="Template.html">Templates</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+<div class="picture">
 
 
+    <div class="content">
+      <br>
+      <p>You are invited to:</p>
+      <p id="Event">Julia's Birthday Party</p>
 
+      <div id="Date">YYYY:MM:DD</div><br/>
 
-      </div>
+      <div id="Address">House 123,Street</div>
+
     </div>
 
-    </body>
+    <br/>
+</div>
+    <form>
+    <label>Event name:</label>
+    <div class="drag1">
+      <input id="eventname" type="text"/><br>
+    </div>
+
+    <label>Date:</label>
+    <div class="drag1">
+      <input id="date" type="date"/><br>
+    </div>
+
+    <label>Address:</label>
+    <div  class="drag1">
+      <textarea id="address" name="name" rows="2" cols="25"></textarea><br>
+    </div>
+
+    <button type="button" name="button" onclick="Save()">Save As Favourite</button>
+    <button type="button" name="button" onclick="ChangeMe()">Submit</button>
+    <button type="button" name="button" onclick="Remove()">Delete</button>
+    </form>
+
+
+  </body>
 </html>
