@@ -9,7 +9,7 @@
 
   #content{
     padding-top: 100px;
-    background-image: url("whitetheme.jpg");
+    background-image: url("Formal2.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,40 +21,104 @@
     width: 700px;
     position: inherit;
     float: inherit;
+    line-height: 81px;
+    display: block;
+
+      /*This section is for dragging box*/
+     padding: 60px;
+     cursor: move;
+     z-index: 10;
+     color: #fff;
+
   }
 
-  #host{
+  .host{
     font-size: 38px;
     font-family: 'Dancing Script', cursive;
     font-weight: bolder;
     padding: 0px auto;
+    text-align: center;
+    background: none;
+    border: 2px dotted transparent;
   }
 
-  p{
-    margin-bottom: 0 px auto;
+  .info{
     padding: 0px auto;
+    margin: 0px auto;
     font-size: 20px;
     font-family: 'Girassol', cursive;
     font-weight: normal;
     text-align: center;
-    line-height: 55px;
+    background: none;
+    border: 2px dotted transparent;
   }
+
+  #info{
+    margin: 250px;
+    padding: 250px;
+    text-align: center;
+    allign-content: center;
+    position: inherit;
+    float: inherit;
+    /*This section is for dragging box*/
+   padding: 60px;
+   cursor: move;
+   z-index: 10;
+   color: #fff;
+   line-height: 81px;
+  }
+
+/*This section is for dragging box*/
+
+  #firstbox {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+  }
+
+  #secondbox{
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 </style>
   </head>
   <body>
 
-    <div>
+    <div id="firstbox">
       <div id="content">
-        <p id="host">Bride's name</p>
-        <p id="host">&</<p>
-        <p id="host">Husband's name</p>
-        <p>Invite you to their wedding</p>
-        <p>Date, Time</p>
-        <p>Address</p>
-
-
+        <textarea class="host" placeholder="Enter bride & husband name" ></textarea>
+      </div>
     </div>
+
+
+    <div id="secondbox">
+      <div id="info">
+        <textarea class="info" placeholder="Invite you to their wedding" ></textarea>
+        <textarea class="info" placeholder="Enter Date & Time" ></textarea>
+        <textarea class="info" placeholder="Enter Address" ></textarea>
+      </div>
+    </div>
+
+
+
+
 
   </body>
 </html>
