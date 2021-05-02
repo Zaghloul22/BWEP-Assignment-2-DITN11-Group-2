@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Corporate template 2</title>
+    <title>Informal Template 2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Angelina">
 <style media="screen">
-
 body{
   background-image: url(Website_Background.jfif);
   background-repeat: no-repeat;
@@ -13,23 +13,57 @@ body{
   background-position: center;
   background-attachment: fixed;
 }
+#eventbox{
+  width: 190px;
+  height: 90px;
+  border: 1px solid magenta;
+  top: 145px;
+  right: 370px;
+  position: absolute;
+}
 
+#datebox{
+  width: 95px;
+  height: 110px;
+  border: 1px solid magenta;
+  top: 310px;
+  left: 315px;
+  position: absolute;
+}
   #content{
-    height: 650px;
+    height: 700px;
     width: 500px;
-    background-image: url(Template.jpg);
+    background-image: url(informal2.png);
     background-size: contain;
-    background-repeat: no-repeat;
     color: white;
     padding: 0;
     margin: 0 auto;
-    text-align: center;
-    padding-top:70px;
+    font-family: "Angelina";
+    font-size: 30px;
+    display: block;
+    align-items: center;
   }
 
-  p{
-    font-size: 30px;
-    font-family: Gabriola;
+  form{
+      width: 600px;
+      text-align: center;
+      padding: 0;
+      margin: 0 auto;
+      border: 2px solid black;
+      display: block;
+      background-color: #FF7276;
+  }
+
+  button{margin: 0 auto;}
+
+  #event{
+    font-size: 20px;
+    padding-bottom: 100px;
+  }
+
+  input,textarea{
+    background-color:transparent;
+    color: white;
   }
 
   #Event, #Address, #Phone, #Email, #Website, #Date,{
@@ -38,35 +72,41 @@ body{
     font-size: 30px;
     font-family: Garamond;
     margin: 0 auto;
-    color: black;
+    color: white;
     padding-bottom: 10px;
   }
 
-  #Event{font-family:Lobster; font-weight: bolder;}
+  .item1 { grid-area: header; }
+  .item2 { grid-area: menu; }
+  .item3 { grid-area: main; }
+  .item4 { grid-area: right; }
+  .item5 { grid-area: footer; }
 
-  input,textarea{
-    background-color:#ADD8E6;
-    color: black;
+  .grid-container {
+    display: grid;
+    grid:
+    'header header header header header header'
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: transparent;
+    border: 1px solid;
+    padding: 20px;
   }
 
-  form{
-    width: 600px;
+  .grid-container > div {
+    background-color: transparent;
     text-align: center;
-    padding: 0;
-    margin: 0 auto;
-    border: 2px solid black;
-    display: block;
-    background-color: #FF7276;
+    padding: 2px 0;
+    font-size: 30px;
   }
-
 </style>
 
 <script>
-
 function ChangeMe(){
   var eventname = document.getElementById("eventname").value;
   var address = document.getElementById("address").value;
-  var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
 
   var box1 = document.getElementById("Event");
@@ -82,87 +122,82 @@ function ChangeMe(){
 function Save(){
   var eventname = document.getElementById("eventname").value;
   var address = document.getElementById("address").value;
-  var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
 
   var box1 = document.getElementById("Event");
   box1.innerHTML = eventname;
   var box2 = document.getElementById("Address");
   box2.innerHTML = address;
-  var box3 = document.getElementById("Website");
-  box3.innerHTML = website;
-  var box4 = document.getElementById("Date");
-  box4.innerHTML = date;
+  var box3 = document.getElementById("Date");
+  box3.innerHTML = date;
 
- if(eventname&&address&&website&&date){
+ if(eventname&&address&&date){
   localStorage.setItem("Event:",eventname);
-  localStorage.setItem("Corporate Address:",address);
-  localStorage.setItem("Corporate Website:",website);
+  localStorage.setItem("Address:",address);
   localStorage.setItem("Date:",date);
 }
 
 function Remove() {
   var eventname = document.getElementById("eventname").value;
   var address = document.getElementById("address").value;
-  var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
 
-  if(eventname&&address&&website&&date){}
+  if(eventname&&address&&date){}
   else {
     localStorage.removeItem("Event:",eventname);
-    localStorage.removeItem("Corporate Address:",address);
-    localStorage.removeItem("Corporate Website:",website);
+    localStorage.removeItem("Event Address:",address);
     localStorage.removeItem("Date:",date);
   }
 }
 
   }
 </script>
+
   </head>
   <body>
     <button type="button" name="button"><a href = "Assignment.html">Back</a></button>
-    <div>
-      <div id="content">
-        <p>You are invited for</p>
-        <p id="Event">Annual Anniversary</p>
 
-        <p>Corporate Address</p>
-        <div id="Address">Corporate 123 Street</div>
+    <div id="content">
 
-        <p>Date</p>
-        <div id="Date">DD:MM:YYYY</div><br/>
-
-        <p id="Website">www.Corporate.com</p>
+      <div class="grid-container">
+        <div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">Menu</div>
+  <div class="item3">Main</div>
+  <div class="item4">Right</div>
+  <div class="item5">Footer</div>
+  <div class="item1">Header</div>
+  <div class="item2">Menu</div>
+  <div class="item3">Main</div>
+  <div class="item4">Right</div>
+  <div class="item5">Footer</div>
+</div>
       </div>
+
     </div>
-    <br/>
+
 
     <form>
       <label>Event name:</label>
-      <div class="drag1">
-        <input id="eventname" type="text"/><br>
-      </div>
-
-
-      <label>Website</label>
-      <div class="drag1">
-        <input id="website" type="url"/><br>
+      <div class="">
+        <input id="event" type="text"/><br>
       </div>
 
       <label>Date</label>
-      <div class="drag1">
+      <div class="">
         <input id="date" type="date"/><br>
       </div>
 
       <label>Address</label>
-      <div  class="drag1">
+      <div  class="">
         <textarea id="address" name="name" rows="5" cols="50"></textarea><br>
       </div>
 
       <button type="button" name="button" onclick="Save()">Save As Favourite</button>
       <button type="button" name="button" onclick="ChangeMe()">Submit</button>
       <button type="button" name="button" onclick="Remove()">Delete</button>
-  </form>
+    </form>
+
 
   </body>
 </html>
