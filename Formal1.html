@@ -11,73 +11,121 @@
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=GFS+Didot&family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
 <style media="screen">
 
-    #info{
-      padding-top: 100px;
-      background-image: url("Formal1.jpg");
+
+body{
+  background-image: url(Website_Background.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+    #content{
+      background-image: url("formal1.jpg");
       background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      padding: 0px auto;
-      margin: 0px auto;
-      text-align: center;
-      align-content: center;
+      allign-items: center;
+      padding: 70px;
+      margin: 0 auto;
       height: 800px;
-      width: 700px;
-      position: inherit;
-      float: inherit;
+      width: 500px;
+      display: block;
+      background-repeat: no-repeat;
+      text-align: center;
+      top: 100px;
+
     }
 
-    #recepient{
-      font-size: 38px;
-      font-family: 'Alex Brush', cursive;
-      font-weight: normal;
-      padding: 0px auto;
-    }
 
-    p{
-      margin-bottom: 0 px auto;
+    textarea{
+      margin-bottom: 0 auto;
       padding: 0px auto;
       font-size: 20px;
-      font-family: 'Lato', sans-serif;
       font-weight: bold;
       text-align: center;
       line-height: 81px;
     }
 
 
+      .host{
+        font-size: 50px;
+        font-family: 'Alex Brush', cursive;
+        font-weight: bolder;
+        padding: 0px auto;
+        text-align: center;
+        background: none;
+        border: 2px dotted transparent;
+        /*To prevent textarea resize and fixed size*/
+        resize: none;
+        height: 100px;
+      }
+
+      .info{
+        font-family: 'Lato', sans-serif;
+        padding: 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background: none;
+        border: 2px dotted transparent;
+        height:100px;
+
+      }
+
+      #info{
+        text-align: center;
+        allign-content: center;
+        padding-bottom: 500px;
+      }
+
+      #button{
+        text-align: center;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+
+      }
+
+      p{
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      textarea{
+        overflow: hidden;
+        /*To center text area and position it vertically*/
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+      }
+
+      /*Making placeholder dissapear when type*/
+        textarea:focus::placeholder {
+        color: transparent;
+      }
 
     </style>
+
   </head>
   <body>
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo">E-Card Maker</label>
-      <ul>
-        <li><a href="Assignment.html">Home</a></li>
-        <li><a href="AboutUs.html">About</a></li>
-        <li><a href="Template.html">Templates</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    
-    <div>
-      <div id="info">
-      <p> You are invited to</p>
-      <p>The wedding of</p>
-      <p id="recepient">Bride's name & Husband's name</p>
-      <p>Date</p>
-      <p>Time</p>
-      <p>Address</p>
 
+    <div id="firstbox">
+      <div id="content">
+        <p class="info">Please join us in</p>
+        <p class="host">Graduation Celebration</p>
+        <p class="info"> honouring</p>
+        <textarea class="host"  placeholder="Enter Name" ></textarea>
+        <textarea class="info"  placeholder="Enter Date & Time" ></textarea>
+        <textarea class="info"  placeholder="Enter Address" ></textarea>
+      </div>
+  </div>
 
-
-
-
-
-
+  <div>
+    <div id="button">
+      <button type="button" name="button" onclick="Save()">Save as Favourite</button>
+      <button type="button" name="button" onclick="change()">Delete</button>
+      <button type="button" name="button" onclick="Remove()">Submit</button>
     </div>
   </div>
 

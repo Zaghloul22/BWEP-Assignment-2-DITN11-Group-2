@@ -27,7 +27,7 @@ body{
     allign-items: center;
     padding: 70px;
     margin: 0 auto;
-    height: 700px;
+    height: 800px;
     width: 500px;
     display: block;
     background-repeat: no-repeat;
@@ -45,8 +45,8 @@ body{
     text-align: center;
     background: none;
     border: 2px dotted transparent;
-    /*To prevent textarea resize and fixed size*/
-    resize: none;
+
+
   }
 
 /*Font and text proporties for content or information*/
@@ -58,6 +58,7 @@ body{
     text-align: center;
     background: none;
     border: 2px dotted transparent;
+    overflow: auto;
   }
 
 /*Positioning for content or information*/
@@ -77,27 +78,16 @@ body{
 
 /*Get rid of scroll wheel and resize for textarea*/
   textarea{
-    overflow: hidden;
+    overflow: auto;
 /*To center text area and position it vertically*/
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-
-
   }
 
 /*Making placeholder dissapear when type*/
   textarea:focus::placeholder {
   color: transparent;
-}
-
-p{
-  font-size: 40px;
-  font-weight: bolder;
-  font-family: 'Dancing Script', cursive;
-  padding: 0;
-  text-align: center;
 }
 
 /*To give space in each text area in the div element*/
