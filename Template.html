@@ -2,7 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <link rel="stylesheet" href="Footer.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Template</title>
     <script type="text/javascript">
     // function changeMe(){
@@ -22,6 +27,7 @@
     // }
     </script>
     <style media="screen">
+
     body{
       background-image: url(Website_Background.jfif);
       background-repeat: no-repeat;
@@ -38,43 +44,12 @@
         height:100px;
       }
 
-      #navigation{
-        display: flex;
-        list-style: none;
-        margin: 0;
-        background: navy;
-        flex-flow: row wrap;
-        justify-content: center;
-      }
 
-      #navigation a{
-        text-decoration: none;
-        display: block;
-        color: #ADD8E6;
-        padding: 1em;
-      }
 
-      #footer{
-        display: flex;
-        list-style: none;
-        margin: 0 auto;
-        background: navy;
-        flex-flow: row wrap;
-        justify-content: center;
-      }
-
-      #footer a{
-        text-decoration: none;
-        display: block;
-        color: silver;
-        padding: 1em;
-        background-color: navy;
-      }
-
-div {
+/* div {
     display: block;
     text-align: center;
-}
+} */
 
 .template-list {
     display: flex;
@@ -83,7 +58,7 @@ div {
     margin: 40px 0;
     font-size: 16px;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
 }
 main .template-list .template {
     display: flex;
@@ -106,12 +81,27 @@ legend{
 fieldset{
   margin: 0 auto;
   width: 400px;
+  display: block;
+  text-align: center;
 }
 
 </style>
 
 </head>
 <body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">E-Card Maker</label>
+    <ul>
+      <li><a href="Assignment.html">Home</a></li>
+      <li><a href="AboutUs.html">About</a></li>
+      <li><a href="Template.html">Templates</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
 <fieldset>
   <legend>Corporate</legend>
@@ -171,14 +161,55 @@ fieldset{
                         <div class="template-list">
                         </fieldset>
 
+                        <footer>
+                          <div class="main-content">
+                            <div class="left box">
+                              <h2>Contact Us</h2>
+                              <div class="content">
+                                <div class="social">
+                                  <a href="https://facebook.com/"><span class="fab fa-facebook-f"></span></a>
+                                  <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+                                </div>
+                              </div>
+                              <h2>Address</h2>
+                              <div class="content">
+                                <div class="place">
+                                  <span class="fas fa-map-marker-alt"></span>
+                                  <span class="text">Politeknik Brunei, Brunei Darussalam</span>
+                                </div>
+                                <div class="email">
+                                  <span class="fas fa-envelope"></span>
+                                  <span class="text">DITN_Group2@gmail.com  </span>
+                                </div>
+                                </div>
+                            </div>
 
-
-                          <div id="footer">
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><img src="facebook.webp" alt="" class="social"/><a href="https://www.facebook.com/"/></a></li>
-                            <li><img src="twitter.png" alt="" class="social"/><a href="http://www.twitter.com/"/></a></li>
+                            <div class="right box">
+                              <h2>Support</h2>
+                              <div class="content">
+                                <form action="#">
+                                  <div class="email">
+                                    <div class="text">Email *</div>
+                                    <input type="email" required>
+                                  </div>
+                                  <div class="msg">
+                                    <div class="text">Message *</div>
+                                    <textarea rows="2" cols="25" required></textarea>
+                                  </div>
+                                  <div class="btn">
+                                    <button type="submit">Send</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
                           </div>
-                          </body>
-                        </html>
+                          <div class="bottom">
+                            <center>
+                              <span class="credit">Created By DITN Group 2</a> | </span>
+                              <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+                            </center>
+                          </div>
+                        </footer>
+
+</body>
+</html>

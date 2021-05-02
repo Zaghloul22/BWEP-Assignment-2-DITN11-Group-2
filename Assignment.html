@@ -2,8 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <title>Template</title>
+
+    <link rel="stylesheet" href="Footer.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <title>E-Card Maker </title>
     <script type="text/javascript">
     // function changeMe(){
     //   var userInput, myBox;
@@ -33,180 +40,13 @@
 
     a{color: white;}
 
-      #logo, .social{
+      #Ecard, .social{
         width:100px;
         height:100px;
       }
 
-      #navigation{
-        display: flex;
-        list-style: none;
-        margin: 0;
-        background: navy;
-        flex-flow: row wrap;
-        justify-content: center;
-      }
 
-      #navigation a{
-        text-decoration: none;
-        display: block;
-        color: #ADD8E6;
-        padding: 1em;
-      }
 
-      #footer{
-        display: flex;
-        list-style: none;
-        margin: 0 auto;
-        background: navy;
-        flex-flow: row wrap;
-        justify-content: center;
-      }
-
-      #footer a{
-        text-decoration: none;
-        display: block;
-        color: silver;
-        padding: 1em;
-        background-color: navy;
-      }
-
-div {
-    display: block;
-    text-align: center;
-}
-
-.template-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px 0;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: left;
-}
-main .template-list .template {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 32px;
-    justify-content: flex-end;
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid;
-    text-decoration: unset;
-}
-
-legend{
-  text-align: center;
-  font-size: 50px;
-
-}
-
-fieldset{
-  margin: 0 auto;
-  width: 400px;
-}
-
-    /* Sidebar */
-    *{
-      padding: 0;
-      margin: 0;
-      text-decoration: none;
-      list-style: none;
-      box-sizing: border-box;
-    }
-    body{
-      font-family: montserrat;
-    }
-    nav{
-      background: #ADD8E6;
-      height: 80px;
-      width: 100%;
-    }
-    label.logo{
-      color: white;
-      font-size: 35px;
-      line-height: 80px;
-      padding: 0 100px;
-      font-weight: bold;
-    }
-    nav ul{
-      float: right;
-      margin-right: 20px;
-    }
-    nav ul li{
-      display: inline-block;
-      line-height: 80px;
-      margin: 0 5px;
-    }
-    nav ul li a{
-      color: white;
-      font-size: 17px;
-      padding: 7px 13px;
-      border-radius: 3px;
-      text-transform: uppercase;
-    }
-    a.active,a:hover{
-      background: #ADD8E6;
-      transition: .5s;
-    }
-    .checkbtn{
-      font-size: 30px;
-      color: white;
-      float: right;
-      line-height: 80px;
-      margin-right: 40px;
-      cursor: pointer;
-      display: none;
-    }
-    #check{
-      display: none;
-    }
-    @media (max-width: 952px){
-      label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-      }
-      nav ul li a{
-        font-size: 16px;
-      }
-    }
-    @media (max-width: 858px){
-      .checkbtn{
-        display: block;
-      }
-      ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-      }
-      nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-      }
-      nav ul li a{
-        font-size: 20px;
-      }
-      a:hover,a.active{
-        background: none;
-        color: #ADD8E6;
-      }
-      #check:checked ~ ul{
-        left: 0;
-      }
-    }
-    section{
-      background: url(bg1.jpg) no-repeat;
-      background-size: cover;
-      height: calc(100vh - 80px);
-    }
 
 
     </style>
@@ -220,80 +60,78 @@ fieldset{
       </label>
       <label class="logo">E-Card Maker</label>
       <ul>
-        <li><a class="active" href="Assignment.html">Home</a></li>
+        <li><a href="Assignment.html">Home</a></li>
         <li><a href="AboutUs.html">About</a></li>
-        <li><a href="#">Templates</a></li>
+        <li><a href="Template.html">Templates</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
     <section></section>
 
-  <fieldset>
-    <legend>Corporate</legend>
-    <div class="template-list">
-      <div>
-      <a href="Corporate.jpg">  <img src="Corporate.jpg" alt="Corporate 1" width="240px" height="300px" > </a>
-        <div><a href="CorporateTemplate1.html">Edit this template</a></div>
-      </div>
-      <picture><source media="(max-width: 400px)" srcset="  ">
-      </div>
 
-        <div class="template-list">
-          <div>
-          <a href="Template.jpg">  <img src="Template.jpg" alt="Corporate 2" width="240px" height="300px" > </a>
-            <div><a href="CorporateTemplate2.html">Edit this template</a></div>
+
+    <footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>Contact Us</h2>
+          <div class="content">
+            <div class="social">
+              <a href="https://facebook.com/"><span class="fab fa-facebook-f"></span></a>
+              <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+            </div>
           </div>
-          <picture><source media="(max-width: 400px)" srcset="  ">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Politeknik Brunei, Brunei Darussalam</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">DITN_Group2@gmail.com  </span>
+            </div>
+            </div>
+        </div>
+
+        <!-- <div class="center box">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Politeknik Brunei, Brunei Darussalam</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">20FTT1418@student.pb.edu.bn</span>
+            </div>
           </div>
-        </fieldset>
+        </div> -->
 
-        <fieldset>
-          <legend>Formal</legend>
-            <div class="template-list">
-              <div>
-              <a href="Formal1.html">  <img src="Formal1.jpg" alt="Formal 1" width="240px" height="300px" > </a>
-                <div><a href="Formal1.html">Edit this template</a></div>
+        <div class="right box">
+          <h2>Support</h2>
+          <div class="content">
+            <form action="#">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
               </div>
-              <picture><source media="(max-width: 400px)" srcset="  ">
+              <div class="msg">
+                <div class="text">Message *</div>
+                <textarea rows="2" cols="25" required></textarea>
               </div>
-
-                <div class="template-list">
-                  <div>
-                  <a href="Formal2.html">  <img src="Formal2.jpg" alt="Formal 2" width="240px" height="300px" > </a>
-                    <div><a href="Formal2.html">Edit this template</a></div>
-                  </div>
-                  <picture><source media="(max-width: 400px)" srcset="  ">
-                  </div>
-                </fieldset>
-
-                <fieldset>
-                  <legend>Informal</legend>
-                    <div class="template-list">
-                      <div>
-                      <a href="InformalTemplate.html">  <img src="informal1.jpg" alt="Informal 1" width="240px" height="300px" > </a>
-                        <div><a href="InformalTemplate.html">Edit this template</a></div>
-                      </div>
-                      <picture><source media="(max-width: 400px)" srcset="">
-                      </div>
-
-                        <div class="template-list">
-                          <div>
-                           <a href="InformalTemplate2.html">  <img src="informal2.png" alt="Informal 2" width="240px" height="300px" > </a>
-                            <div><a href="InformalTemplate2.html">Edit this template</a></div>
-                          </div>
-                          <picture><source media="(max-width: 400px)" srcset="  ">
-                          </div>
-                          <div class="template-list">
-                          </fieldset>
-
-
-
-                            <div id="footer">
-                              <li><a href="#">Help</a></li>
-                              <li><a href="#">FAQ</a></li>
-                              <li><a href="#">Contact Us</a></li>
-                              <li><img src="facebook.webp" alt="" class="social"/><a href="https://www.facebook.com/"/></a></li>
-                              <li><img src="twitter.png" alt="" class="social"/><a href="http://www.twitter.com/"/></a></li>
-                            </div>
+              <div class="btn">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <center>
+          <span class="credit">Created By DITN Group 2</a> | </span>
+          <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+        </center>
+      </div>
+    </footer>
   </body>
 </html>
