@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="nav.css">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
-    <title>Formal E-card maker</title>
+    <title>Formal Template 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=GFS+Didot&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=GFS+Didot&family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
 <style media="screen">
@@ -32,20 +34,7 @@ body{
       display: block;
       background-repeat: no-repeat;
       text-align: center;
-      top: 100px;
-
     }
-
-
-    textarea{
-      margin-bottom: 0 auto;
-      padding: 0px auto;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 81px;
-    }
-
 
       .host{
         font-size: 50px;
@@ -57,7 +46,6 @@ body{
         border: 2px dotted transparent;
         /*To prevent textarea resize and fixed size*/
         resize: none;
-        height: 100px;
       }
 
       .info{
@@ -68,8 +56,7 @@ body{
         text-align: center;
         background: none;
         border: 2px dotted transparent;
-        height:100px;
-
+        overflow: auto;
       }
 
       #info{
@@ -93,16 +80,20 @@ body{
       }
 
       textarea{
-        overflow: hidden;
+        overflow: auto;
         /*To center text area and position it vertically*/
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
       }
 
       /*Making placeholder dissapear when type*/
         textarea:focus::placeholder {
         color: transparent;
+      }
+
+      div{
+        white-space: pre;
       }
 
     </style>
