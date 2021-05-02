@@ -50,13 +50,14 @@ body{
   }
 
   form{
-    width: 600px;
+    width: 500px;
     text-align: center;
     padding: 0;
     margin: 0 auto;
     border: 2px solid black;
     display: block;
-    background-color: #FF7276;
+    background-color: blue;
+    color: silver;
   }
 
   #back{
@@ -122,10 +123,10 @@ function Save(){
   box4.innerHTML = date;
 
  if(eventname&&address&&website&&date){
-  localStorage.setItem("Event:",eventname);
-  localStorage.setItem("Corporate Address:",address);
-  localStorage.setItem("Corporate Website:",website);
-  localStorage.setItem("Date:",date);
+  localStorage.setItem("Event",eventname);
+  localStorage.setItem("Corporate Address",address);
+  localStorage.setItem("Corporate Website",website);
+  localStorage.setItem("Date",date);
 }
 }
 
@@ -137,10 +138,10 @@ function Remove() {
 
   if(eventname&&address&&website&&date){}
   else {
-    localStorage.removeItem("Event:",eventname);
-    localStorage.removeItem("Corporate Address:",address);
-    localStorage.removeItem("Corporate Website:",website);
-    localStorage.removeItem("Date:",date);
+    localStorage.removeItem("Event",eventname);
+    localStorage.removeItem("Corporate Address",address);
+    localStorage.removeItem("Corporate Website",website);
+    localStorage.removeItem("Date",date);
   }
 }
 

@@ -51,7 +51,8 @@ body{
       margin: 0 auto;
       border: 2px solid black;
       display: block;
-      background-color: #FF7276;
+      background-color: blue;
+      color: silver;
   }
 
   button{margin: 0 auto;}
@@ -98,11 +99,11 @@ body{
 
 <script>
 
+function change(){
   var eventname = document.getElementById("event1").value;
   var address = document.getElementById("address1").value;
   var date = document.getElementById("date1").value;
 
-function change(){
   var box1 = document.getElementById("event2");
   box1.innerHTML = eventname;
   var box2 = document.getElementById("address2");
@@ -112,6 +113,10 @@ function change(){
 }
 
 function Save(){
+  var eventname = document.getElementById("event1").value;
+  var address = document.getElementById("address1").value;
+  var date = document.getElementById("date1").value;
+
   var box1 = document.getElementById("event2");
   box1.innerHTML = eventname;
   var box2 = document.getElementById("address2");
@@ -120,18 +125,22 @@ function Save(){
   box3.innerHTML = date;
 
   if(eventname&&address&&date){
-  localStorage.setItem("Event:",eventname);
-  localStorage.setItem("Corporate Address:",address);
-  localStorage.setItem("Date:",date);
+  localStorage.setItem("Event",eventname);
+  localStorage.setItem("Corporate Address",address);
+  localStorage.setItem("Date",date);
 }
 }
 
 function Remove(){
+  var eventname = document.getElementById("event1").value;
+  var address = document.getElementById("address1").value;
+  var date = document.getElementById("date1").value;
+
   if(eventname&&address&&date){}
   else {
-    localStorage.removeItem("Event:",eventname);
-    localStorage.removeItem("Corporate Address:",address);
-    localStorage.removeItem("Date:",date);
+    localStorage.removeItem("Event",eventname);
+    localStorage.removeItem("Corporate Address",address);
+    localStorage.removeItem("Date",date);
   }
 }
 
