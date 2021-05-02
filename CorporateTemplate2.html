@@ -59,11 +59,37 @@ body{
     background-color: #FF7276;
   }
 
+  #back{
+    width: 100px;
+    height: 50px;
+  }
+
+  #drop{
+    width: 400px;
+    height: 80px;
+    border: 1px solid white;
+    margin: 0 auto;
+  }
+
+  #image1,#image2,#image3{
+    width: 400px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  fieldset{
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+  }
+  legend{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
 </style>
 
 <script>
-
-
 function ChangeMe(){
   var eventname = document.getElementById("eventname").value;
   var address = document.getElementById("address").value;
@@ -101,6 +127,7 @@ function Save(){
   localStorage.setItem("Corporate Website:",website);
   localStorage.setItem("Date:",date);
 }
+}
 
 function Remove() {
   var eventname = document.getElementById("eventname").value;
@@ -117,11 +144,23 @@ function Remove() {
   }
 }
 
-  }
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
 </script>
   </head>
   <body>
-    <button type="button" name="button"><a href = "Assignment.html">Back</a></button>
+    <button id="back" type="button" name="button"><a href = "Assignment.html">Back</a></button>
     <div>
       <div id="content">
         <p>You are invited for</p>
@@ -131,9 +170,11 @@ function Remove() {
         <div id="Address">Corporate 123 Street</div>
 
         <p>Date</p>
-        <div id="Date">DD:MM:YYYY</div><br/>
+        <div id="Date">DD:MM:YYYY, 00:00</div><br/>
 
         <p id="Website">www.Corporate.com</p>
+
+        <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       </div>
     </div>
     <br/>
@@ -152,7 +193,7 @@ function Remove() {
 
       <label>Date</label>
       <div class="drag1">
-        <input id="date" type="date"/><br>
+        <input id="date" type="datetime-local"/><br>
       </div>
 
       <label>Address</label>
@@ -165,5 +206,19 @@ function Remove() {
       <button type="button" name="button" onclick="Remove()">Delete</button>
   </form>
 
+  <fieldset>
+    <legend>Choose your picture</legend>
+    <div id="image1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="Draggable item/join-us.jfif" draggable="true" ondragstart="drag(event)" id="drag1" width="400" height="80">
+    </div>
+
+    <div id="image2" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="Draggable item/see-you-there.png" draggable="true" ondragstart="drag(event)" id="drag2" width="400" height="80">
+    </div>
+
+    <div id="image3" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="Draggable item/thank-you.gif" draggable="true" ondragstart="drag(event)" id="drag3" width="400" height="80">
+    </div>
+  </fieldset>
   </body>
 </html>

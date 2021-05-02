@@ -35,7 +35,7 @@ body{
     text-align: center;
   }
 
-  .drag2{
+  .output{
     height: 50px;
     width: 300px;
     padding: 0;
@@ -45,7 +45,7 @@ body{
   }
 
   form{
-      width: 600px;
+      width: 500px;
       text-align: center;
       padding: 0;
       margin: 0 auto;
@@ -63,9 +63,37 @@ body{
 
   input,textarea{
     background-color:#ADD8E6;
-    color: white;
+    color: black;
   }
 
+  #back{
+    height: 50px;
+    width: 100px;
+  }
+
+  #drop{
+    width: 400px;
+    height: 80px;
+    border: 1px solid white;
+    margin: 0 auto;
+  }
+
+  #image1,#image2,#image3{
+    width: 400px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  fieldset{
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+  }
+  legend{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
 </style>
 
 <script>
@@ -73,7 +101,6 @@ body{
   var eventname = document.getElementById("event1").value;
   var address = document.getElementById("address1").value;
   var date = document.getElementById("date1").value;
-  var time = document.getElementById("time1").value;
 
 function change(){
   var box1 = document.getElementById("event2");
@@ -107,34 +134,49 @@ function Remove(){
     localStorage.removeItem("Date:",date);
   }
 }
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
 </script>
 
   </head>
   <body>
-    <button type="button" name="button"><a href = "Assignment.html">Back</a></button>
+    <button type="button" name="button" id="back"><a href = "Assignment.html">Back</a></button>
     <div id="content">
         <p>You are invited by corporate for </p>
-        <p><div class="drag2" id="event2">GRAND OPENING</div></p>
+        <p><div class="output" id="event2">GRAND OPENING</div></p>
         <p>Location Address</p>
-        <div class="drag2" id="address2">Corporate, floor 5</div>
+        <div class="output" id="address2">Corporate, floor 5</div>
         <p>Date & Time</p>
-        <div class="drag2" id="date2">day/month/year, 00:00 ~ 23:59</div>
+        <div class="output" id="date2">day/month/year, 00:00</div>
+        <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
 
     <form>
       <label>Event name:</label>
-      <div class="drag1">
+      <div>
         <input id="event1" type="text"><br>
       </div>
 
       <label>Address</label>
-      <div  class="drag1">
+      <div>
         <textarea id="address1"name="name" rows="3" cols="60"></textarea><br>
       </div>
 
-      <label>Date & Time</label>
-      <div class="drag1">
-        <input id="date1" type="datetime-local"/><br>
+      <label>Date</label>
+      <div>
+        <input id="date1" type="date"/><br>
       </div>
 
       <button type="button" name="button" onclick="Save()">Save As Favourite</button>
@@ -142,5 +184,19 @@ function Remove(){
       <button type="button" name="button" onclick="Remove()">Delete</button>
     </form>
 
+    <fieldset>
+      <legend>Choose your picture</legend>
+      <div id="image1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="Draggable item/join-us.jfif" draggable="true" ondragstart="drag(event)" id="drag1" width="400" height="80">
+      </div>
+
+      <div id="image2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="Draggable item/see-you-there.png" draggable="true" ondragstart="drag(event)" id="drag2" width="400" height="80">
+      </div>
+
+      <div id="image3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="Draggable item/thank-you.gif" draggable="true" ondragstart="drag(event)" id="drag3" width="400" height="80">
+      </div>
+    </fieldset>
   </body>
 </html>
