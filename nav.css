@@ -84,7 +84,7 @@ a.active,a:hover{
     font-size: 20px;
   }
   a:hover,a.active{
-    background: none;
+    background: Znone;
     color: #5B84C4;
   }
   #check:checked ~ ul{
