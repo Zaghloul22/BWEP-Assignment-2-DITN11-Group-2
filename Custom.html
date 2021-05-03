@@ -28,6 +28,7 @@ body{
     margin: 0 auto;
     text-align: center;
     padding-top:70px;
+    border: 2px solid gold;
   }
 
   p{
@@ -68,7 +69,7 @@ body{
     height: 50px;
   }
 
-  #drop{
+  #drop, div #content div{
     width: 400px;
     height: 80px;
     border: 1px solid white;
@@ -193,18 +194,11 @@ function drop(ev) {
     </nav>
     <div>
       <div id="content">
-        <p>You are invited for</p>
-        <p id="Event">Annual Anniversary</p>
-
-        <p>Corporate Address</p>
-        <div id="Address">Corporate 123 Street</div>
-
-        <p>Date</p>
-        <div id="Date">DD:MM:YYYY</div><br/>
-
-        <p id="Website">www.Corporate.com</p>
-        <p id="Time">00:00</p>-<p id="Time1">23:59</p>
-
+        <div id="Event"></div>
+        <div id="Address"></div>
+        <div id="Date"></div><br/>
+        <div id="Time"></p><p id="Time1"></div>
+        <div id="Website"></div>
         <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       </div>
     </div>
