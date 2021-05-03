@@ -66,13 +66,18 @@ body{
     padding-bottom: 500px;
   }
 
-  #button{
-    text-align: center;
-    margin: auto;
-    display: flex;
-    justify-content: center;
 
+  form{
+      width: 500px;
+      text-align: center;
+      padding: 0;
+      margin: 0 auto;
+      border: 2px solid black;
+      display: block;
+      background-color: #a7d2db;
   }
+
+  button{margin: 0 auto;}
 
 /*Get rid of scroll wheel and resize for textarea*/
   textarea{
@@ -95,6 +100,72 @@ div{
 
 
 </style>
+
+<script>
+function Submit(){
+  var name = document.getElementById("name").value;
+  var saying = document.getElementById("saying").value;
+  var date = document.getElementById("date").value;
+  var address = document.getElementById("address").value;
+
+
+  var box1 = document.getElementById("Name");
+  box1.innerHTML = name;
+  var box2 = document.getElementById("Saying");
+  box2.innerHTML = saying;
+  var box3 = document.getElementById("Date");
+  box3.innerHTML = date;
+  var box4 = document.getElementById("Address");
+  box4.innerHTML = address;
+
+}
+
+function Save(){
+  var name = document.getElementById("name").value;
+  var saying = document.getElementById("saying").value;
+  var date = document.getElementById("date").value;
+  var address = document.getElementById("address").value;
+
+
+
+  var box1 = document.getElementById("Name");
+  box1.innerHTML = name;
+  var box2 = document.getElementById("Saying");
+  box4.innerHTML = saying;
+  var box3 = document.getElementById("Date");
+  box3.innerHTML = date;
+  var box4 = document.getElementById("Address");
+  box2.innerHTML = address;
+
+
+ if(name&&saying&&date&&address){
+  localStorage.setItem("Name:",name);
+  localStorage.setItem("Saying:",saying);
+  localStorage.setItem("Date:",date);
+  localStorage.setItem("Address:",address);
+
+
+}
+
+function Remove() {
+  var name = document.getElementById("name").value;
+  var saying = document.getElementById("saying").value;
+  var date = document.getElementById("date").value;
+  var address = document.getElementById("address").value;
+
+  if(name&&saying&&date&&address){}
+  else {
+    localStorage.removeItem("Name:",name);
+    localStorage.removeItem("Saying:",saying);
+    localStorage.removeItem("Date:",date);
+    localStorage.removeItem("Address:",address);
+
+  }
+}
+
+  }
+</script>
+
   </head>
   <body>
     <nav>
@@ -110,22 +181,43 @@ div{
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
+
     <div id="firstbox">
       <div id="content">
-        <textarea class="host" placeholder="Enter Husband's name & Bride's name" style="overflow:hidden;" ></textarea>
-        <textarea class="info" placeholder="What do you want to say?" ></textarea>
-        <textarea class="info" placeholder="Enter Date & Time" ></textarea>
-        <textarea class="info" placeholder="Enter Address" ></textarea>
+        <textarea class="host" id="Name" readonly> Enter Husband's name & Bride's name </textarea>
+        <textarea class="info" id="Saying" readonly> What do you want to say? </textarea>
+        <textarea class="info" id="Date" readonly> Enter Date</textarea>
+        <textarea class="info" id="Address" readonly> Enter Address </textarea>
       </div>
     </div>
 
+    <form>
+    <label class="info">Enter Bride's & Husband's name</label>
     <div>
-      <div id="button">
-        <button type="button">Save as Favourite</button>
-        <button type="button">Delete</button>
-        <button type="button">Submit</button>
-      </div>
+      <input id="name" type="text"/><br>
     </div>
+
+    <label class="info">What do you want to say?</label>
+    <div>
+      <textarea id="saying" name="name" rows="5" cols="50"></textarea><br>
+    </div>
+
+
+    <label class="info">Enter Date & Time</label>
+    <div>
+      <textarea id="date" name="name" rows="2" cols="50"></textarea><br>
+    </div>
+
+    <label class="info">Enter Address</label>
+    <div >
+      <textarea id="address" name="name" rows="5" cols="50"></textarea><br>
+    </div>
+
+    <button type="button" name="button" onclick="Save()">Save as Favourite</button>
+    <button type="button" name="button" onclick="Submit()">Submit</button>
+    <button type="button" name="button" onclick="Remove()">Delete</button>
+    </form>
+
 
 
 
