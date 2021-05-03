@@ -128,24 +128,14 @@ function Save(){
   var box3 = document.getElementById("date2");
   box3.innerHTML = date;
 
-  if(eventname&&address&&date){
   localStorage.setItem("Event",eventname);
   localStorage.setItem("Corporate Address",address);
   localStorage.setItem("Date",date);
-}
+
 }
 
 function Remove(){
-  var eventname = document.getElementById("event1").value;
-  var address = document.getElementById("address1").value;
-  var date = document.getElementById("date1").value;
-
-  if(eventname&&address&&date){}
-  else {
-    localStorage.removeItem("Event",eventname);
-    localStorage.removeItem("Corporate Address",address);
-    localStorage.removeItem("Date",date);
-  }
+return localStorage.clear();
 }
 
 function allowDrop(ev) {

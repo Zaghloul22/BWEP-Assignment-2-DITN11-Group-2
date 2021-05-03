@@ -2,130 +2,266 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
-    <script type="text/javascript">
-    // function changeMe(){
-    //   var userInput, myBox;
-    //   userInput = document.getElementById("user-text").value;
-    //   myBox = document.getElementById("box");
-    //   myBox.innerHTML = userInput
-    //
-    //   if(userInput=="magenta"){
-    //     myBox.style.backgroundColor="magenta";
-    //   } else if(userInput=="hijau"){
-    //     myBox.style.backgroundColor="lightgreen";
-    //   }else {
-    //     myBox.style.backgroundColor="white";
-    //   }
-    //
-    // }
-    </script>
-    <style media="screen">
-    body{
-      background-image: url(Website_Background.jfif);
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin: 0 auto;
-      background-position: center;
-      background-attachment: fixed;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
-    a{color: white;}
+    <title>Corporate template 2</title>
+<style media="screen">
 
-      #logo, .social{
-        width:100px;
-        height:100px;
-      }
-
-      #navigation{
-        display: flex;
-        list-style: none;
-        margin: 0;
-        background: navy;
-        flex-flow: row wrap;
-        justify-content: center;
-      }
-
-      #navigation a{
-        text-decoration: none;
-        display: block;
-        color: #ADD8E6;
-        padding: 1em;
-      }
-
-      #footer{
-        display: flex;
-        list-style: none;
-        margin: 0 auto;
-        background: navy;
-        flex-flow: row wrap;
-        justify-content: center;
-        bottom: 100px;
-      }
-
-      #footer a{
-        text-decoration: none;
-        display: block;
-        color: silver;
-        padding: 1em;
-        background-color: navy;
-      }
-
-.template-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px 0;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: left;
-}
-
-
-legend{
-  text-align: center;
-  font-size: 50px;
-  color:white;
-
-}
-
-fieldset{
+body{
+  background-image: url(Website_Background.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
-  width: 500px;
-  height: 600px;
-  display: block;
-  background-color:navy;
-  color: #ADD8E6;
-  border: 5px solid ;
-  opacity: 0.6;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-    </style>
+  #content{
+    height: 720px;
+    width: 500px;
+    background-image: url(Template.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    padding-top:70px;
+  }
 
+  p{
+    font-size: 30px;
+    font-family: Gabriola;
+  }
+
+  #Event, #Address, #Phone, #Email, #Website, #Date,{
+    height: 30px;
+    width: 300px;
+    font-size: 30px;
+    font-family: Garamond;
+    margin: 0 auto;
+    color: white;
+    padding-bottom: 10px;
+  }
+
+  #Event{font-family:Lobster; font-weight: bolder;}
+
+  input,textarea{
+    background-color:#ADD8E6;
+    color: black;
+  }
+
+  form{
+    width: 500px;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    border: 2px solid black;
+    display: block;
+    background-color: blue;
+    color: silver;
+  }
+
+  #back{
+    width: 100px;
+    height: 50px;
+  }
+
+  #drop{
+    width: 400px;
+    height: 80px;
+    border: 1px solid white;
+    margin: 0 auto;
+  }
+
+  #image1,#image2,#image3{
+    width: 400px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  fieldset{
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+  }
+  legend{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
+</style>
+
+<script>
+function ChangeMe(){
+  var eventname = document.getElementById("eventname").value;
+  var address = document.getElementById("address").value;
+  var website = document.getElementById("website").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var time1 = document.getElementById("time1").value;
+
+  var box1 = document.getElementById("Event");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("Address");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("Website");
+  box3.innerHTML = website;
+  var box4 = document.getElementById("Date");
+  box4.innerHTML = date;
+  var box5 = document.getElementById("Time");
+  box5.innerHTML = time;
+  var box6 = document.getElementById("Time1");
+  box6.innerHTML = time1;
+}
+
+function Save(){
+  var eventname = document.getElementById("eventname").value;
+  var address = document.getElementById("address").value;
+  var website = document.getElementById("website").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var time1 = document.getElementById("time1").value;
+
+  var box1 = document.getElementById("Event");
+  box1.innerHTML = eventname;
+  var box2 = document.getElementById("Address");
+  box2.innerHTML = address;
+  var box3 = document.getElementById("Website");
+  box3.innerHTML = website;
+  var box4 = document.getElementById("Date");
+  box4.innerHTML = date;
+  var box5 = document.getElementById("Time");
+  box5.innerHTML = time;
+  var box6 = document.getElementById("Time1");
+  box6.innerHTML = time1;
+
+ if(eventname&&address&&website&&date&&time&&time1){
+  localStorage.setItem("Event",eventname);
+  localStorage.setItem("Corporate Address",address);
+  localStorage.setItem("Corporate Website",website);
+  localStorage.setItem("Date",date);
+  localStorage.setItem("From",time);
+  localStorage.setItem("To",time1);
+}
+}
+
+function Remove() {
+return localStorage.clear();
+  }
+
+
+function Preview(){
+  var eventname = document.getElementById("eventname").value;
+  var address = document.getElementById("address").value;
+  var website = document.getElementById("website").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var time1 = document.getElementById("time1").value;
+  window.Location.href="preview.html";
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
   </head>
   <body>
-    <ul id="navigation">
-      <a href="pb githb.png"> <img src="pb github.png" alt="" id="logo"/> </a>
-      <li><a href="#">Home</a></li>
-      <li><a href="index.html">Template</a></li>
-      <li><a href="AboutUs.html">About</a></li>
-    </ul>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Policard Studio</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="Template.html">Templates</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+      <div id="content">
+        <p>You are invited for</p>
+        <p id="Event">Annual Anniversary</p>
+
+        <p>Corporate Address</p>
+        <div id="Address">Corporate 123 Street</div>
+
+        <p>Date</p>
+        <div id="Date">DD:MM:YYYY</div><br/>
+
+        <p id="Website">www.Corporate.com</p>
+        <p id="Time">00:00</p>-<p id="Time1">23:59</p>
+
+        <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+    </div>
+    <br/>
+
+    <form>
+      <label>Event name:</label>
+      <div>
+        <input id="eventname" type="text"/><br>
+      </div>
 
 
+      <label>Website</label>
+      <div>
+        <input id="website" type="url"/><br>
+      </div>
+
+      <label>Date</label>
+      <div>
+        <input id="date" type="date"/><br>
+      </div>
+
+      <label>Time From</label>
+      <div>
+        <input id="time" type="time"/><br>
+      </div>
+
+      <label>to</label>
+      <div>
+        <input id="time1" type="time"/><br>
+      </div>
+
+      <label>Address</label>
+      <div>
+        <textarea id="address" name="name" rows="5" cols="50"></textarea><br>
+      </div>
+
+      <button type="button" name="button" onclick="Save()">Save As Favourite</button>
+      <button type="button" name="button" onclick="ChangeMe()">Submit</button>
+      <button type="button" name="button" onclick="Remove()">Delete</button>
+      <button type="button" name="button" onclick="Preview()"><a href="preview.html">Preview</a></button>
+  </form>
 
   <fieldset>
-    <legend>About</legend>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </fieldset>
+    <legend>Choose your picture</legend>
+    <div id="image1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="Draggable item/join-us.jfif" draggable="true" ondragstart="drag(event)" id="drag1" width="400" height="80">
+    </div>
 
+    <div id="image2" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="Draggable item/see-you-there.png" draggable="true" ondragstart="drag(event)" id="drag2" width="400" height="80">
+    </div>
 
-
-                            <div id="footer">
-                              <li><a href="#">Help</a></li>
-                              <li><a href="#">FAQ</a></li>
-                              <li><a href="#">Contact Us</a></li>
-                              <li><img src="facebook.webp" alt="" class="social"/><a href="https://www.facebook.com/"/></a></li>
-                              <li><img src="twitter.png" alt="" class="social"/><a href="http://www.twitter.com/"/></a></li>
-                            </div>
+    <div id="image3" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="Draggable item/thank-you.gif" draggable="true" ondragstart="drag(event)" id="drag3" width="400" height="80">
+    </div>
+  </fieldset>
   </body>
 </html>
