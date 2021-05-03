@@ -139,33 +139,19 @@ function Save(){
   box6.innerHTML = time1;
 
  if(eventname&&address&&website&&date&&time&&time1){
-  localStorage.getItem("Event",eventname);
-  localStorage.getItem("Corporate Address",address);
-  localStorage.getItem("Corporate Website",website);
-  localStorage.getItem("Date",date);
-  localStorage.getItem("From",time);
-  localStorage.getItem("To",time1);
+  localStorage.setItem("Event",eventname);
+  localStorage.setItem("Corporate Address",address);
+  localStorage.setItem("Corporate Website",website);
+  localStorage.setItem("Date",date);
+  localStorage.setItem("From",time);
+  localStorage.setItem("To",time1);
 }
 }
 
 function Remove() {
-  var eventname = document.getElementById("eventname").value;
-  var address = document.getElementById("address").value;
-  var website = document.getElementById("website").value;
-  var date = document.getElementById("date").value;
-  var time = document.getElementById("time").value;
-  var time1 = document.getElementById("time1").value;
-
-  if(eventname&&address&&website&&date&&time&&time1){}
-  else {
-    localStorage.removeItem("Event",eventname);
-    localStorage.removeItem("Corporate Address",address);
-    localStorage.removeItem("Corporate Website",website);
-    localStorage.removeItem("Date",date);
-    localStorage.removeItem("From",time);
-    localStorage.removeItem("To",time1);
+return localStorage.clear();
   }
-}
+
 
 function Preview(){
   var eventname = document.getElementById("eventname").value;
@@ -174,7 +160,7 @@ function Preview(){
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
   var time1 = document.getElementById("time1").value;
-  window.Location.href="_blank";
+  window.Location.href="preview.html";
 }
 
 function allowDrop(ev) {
@@ -260,7 +246,7 @@ function drop(ev) {
       <button type="button" name="button" onclick="Save()">Save As Favourite</button>
       <button type="button" name="button" onclick="ChangeMe()">Submit</button>
       <button type="button" name="button" onclick="Remove()">Delete</button>
-      <button type="button" name="button" onclick="Preview()">Preview</button>
+      <button type="button" name="button" onclick="Preview()"><a href="preview.html">Preview</a></button>
   </form>
 
   <fieldset>
