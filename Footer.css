@@ -11,6 +11,7 @@ footer{
 }
 .main-content{
   display: flex;
+  color: white;
 }
 .main-content .box{
   flex-basis: 50%;
@@ -148,3 +149,4 @@ footer{
   span{
   text-align: left;}
 }
+input{color: white;}

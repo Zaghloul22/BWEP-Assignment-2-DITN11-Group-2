@@ -100,6 +100,8 @@ function ChangeMe(){
   var address = document.getElementById("address").value;
   var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var time1 = document.getElementById("time1").value;
 
   var box1 = document.getElementById("Event");
   box1.innerHTML = eventname;
@@ -109,6 +111,10 @@ function ChangeMe(){
   box3.innerHTML = website;
   var box4 = document.getElementById("Date");
   box4.innerHTML = date;
+  var box5 = document.getElementById("Time");
+  box5.innerHTML = time;
+  var box6 = document.getElementById("Time1");
+  box6.innerHTML = time1;
 }
 
 function Save(){
@@ -116,6 +122,8 @@ function Save(){
   var address = document.getElementById("address").value;
   var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var time1 = document.getElementById("time1").value;
 
   var box1 = document.getElementById("Event");
   box1.innerHTML = eventname;
@@ -125,12 +133,18 @@ function Save(){
   box3.innerHTML = website;
   var box4 = document.getElementById("Date");
   box4.innerHTML = date;
+  var box5 = document.getElementById("Time");
+  box5.innerHTML = time;
+  var box6 = document.getElementById("Time1");
+  box6.innerHTML = time1;
 
- if(eventname&&address&&website&&date){
-  localStorage.setItem("Event",eventname);
-  localStorage.setItem("Corporate Address",address);
-  localStorage.setItem("Corporate Website",website);
-  localStorage.setItem("Date",date);
+ if(eventname&&address&&website&&date&&time&&time1){
+  localStorage.getItem("Event",eventname);
+  localStorage.getItem("Corporate Address",address);
+  localStorage.getItem("Corporate Website",website);
+  localStorage.getItem("Date",date);
+  localStorage.getItem("From",time);
+  localStorage.getItem("To",time1);
 }
 }
 
@@ -139,14 +153,28 @@ function Remove() {
   var address = document.getElementById("address").value;
   var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var time1 = document.getElementById("time1").value;
 
-  if(eventname&&address&&website&&date){}
+  if(eventname&&address&&website&&date&&time&&time1){}
   else {
     localStorage.removeItem("Event",eventname);
     localStorage.removeItem("Corporate Address",address);
     localStorage.removeItem("Corporate Website",website);
     localStorage.removeItem("Date",date);
+    localStorage.removeItem("From",time);
+    localStorage.removeItem("To",time1);
   }
+}
+
+function Preview(){
+  var eventname = document.getElementById("eventname").value;
+  var address = document.getElementById("address").value;
+  var website = document.getElementById("website").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var time1 = document.getElementById("time1").value;
+  window.Location.href="_blank";
 }
 
 function allowDrop(ev) {
@@ -190,6 +218,7 @@ function drop(ev) {
         <div id="Date">DD:MM:YYYY, 00:00</div><br/>
 
         <p id="Website">www.Corporate.com</p>
+        <p id="Time">00:00</p>-<p id="Time1">23:59</p>
 
         <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       </div>
@@ -198,29 +227,40 @@ function drop(ev) {
 
     <form>
       <label>Event name:</label>
-      <div class="drag1">
+      <div>
         <input id="eventname" type="text"/><br>
       </div>
 
 
       <label>Website</label>
-      <div class="drag1">
+      <div>
         <input id="website" type="url"/><br>
       </div>
 
       <label>Date</label>
-      <div class="drag1">
-        <input id="date" type="datetime-local"/><br>
+      <div>
+        <input id="date" type="date"/><br>
+      </div>
+
+      <label>Time From</label>
+      <div>
+        <input id="time" type="time"/><br>
+      </div>
+
+      <label>to</label>
+      <div>
+        <input id="time1" type="time"/><br>
       </div>
 
       <label>Address</label>
-      <div  class="drag1">
+      <div>
         <textarea id="address" name="name" rows="5" cols="50"></textarea><br>
       </div>
 
       <button type="button" name="button" onclick="Save()">Save As Favourite</button>
       <button type="button" name="button" onclick="ChangeMe()">Submit</button>
       <button type="button" name="button" onclick="Remove()">Delete</button>
+      <button type="button" name="button" onclick="Preview()">Preview</button>
   </form>
 
   <fieldset>
