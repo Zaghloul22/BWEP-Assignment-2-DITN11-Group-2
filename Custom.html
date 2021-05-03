@@ -21,6 +21,7 @@ body{
   #content{
     height: 720px;
     width: 500px;
+    background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
     color: white;
@@ -39,10 +40,10 @@ body{
   #Event, #Address, #Phone, #Email, #Website, #Date,{
     height: 30px;
     width: 300px;
-    font-size: 30px;
+    font-size: 60px;
     font-family: Garamond;
     margin: 0 auto;
-    color: white;
+    color: black;
     padding-bottom: 10px;
   }
 
@@ -72,7 +73,7 @@ body{
   #drop, div #content div{
     width: 400px;
     height: 80px;
-    border: 1px solid white;
+    border: 1px solid black;
     margin: 0 auto;
   }
 
@@ -101,7 +102,6 @@ function ChangeMe(){
   var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
-  var time1 = document.getElementById("time1").value;
 
   var box1 = document.getElementById("Event");
   box1.innerHTML = eventname;
@@ -113,8 +113,6 @@ function ChangeMe(){
   box4.innerHTML = date;
   var box5 = document.getElementById("Time");
   box5.innerHTML = time;
-  var box6 = document.getElementById("Time1");
-  box6.innerHTML = time1;
 }
 
 function Save(){
@@ -123,7 +121,6 @@ function Save(){
   var website = document.getElementById("website").value;
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
-  var time1 = document.getElementById("time1").value;
 
   var box1 = document.getElementById("Event");
   box1.innerHTML = eventname;
@@ -135,8 +132,6 @@ function Save(){
   box4.innerHTML = date;
   var box5 = document.getElementById("Time");
   box5.innerHTML = time;
-  var box6 = document.getElementById("Time1");
-  box6.innerHTML = time1;
 
  if(eventname&&address&&website&&date&&time&&time1){
   localStorage.setItem("Event",eventname);
@@ -144,24 +139,12 @@ function Save(){
   localStorage.setItem("Corporate Website",website);
   localStorage.setItem("Date",date);
   localStorage.setItem("From",time);
-  localStorage.setItem("To",time1);
 }
 }
 
 function Remove() {
 return localStorage.clear();
   }
-
-
-function Preview(){
-  var eventname = document.getElementById("eventname").value;
-  var address = document.getElementById("address").value;
-  var website = document.getElementById("website").value;
-  var date = document.getElementById("date").value;
-  var time = document.getElementById("time").value;
-  var time1 = document.getElementById("time1").value;
-  window.Location.href="preview.html";
-}
 
 function allowDrop(ev) {
   ev.preventDefault();
@@ -197,7 +180,7 @@ function drop(ev) {
         <div id="Event"></div>
         <div id="Address"></div>
         <div id="Date"></div><br/>
-        <div id="Time"></p><p id="Time1"></div>
+        <div id="Time"></p>
         <div id="Website"></div>
         <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       </div>
@@ -224,11 +207,6 @@ function drop(ev) {
       <label>Time From</label>
       <div>
         <input id="time" type="time"/><br>
-      </div>
-
-      <label>to</label>
-      <div>
-        <input id="time1" type="time"/><br>
       </div>
 
       <label>Address</label>
