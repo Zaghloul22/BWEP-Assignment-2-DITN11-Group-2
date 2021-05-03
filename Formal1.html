@@ -35,21 +35,19 @@ body{
     }
 
       .host{
-        font-size: 50px;
+        font-size: 45px;
         font-family: 'Alex Brush', cursive;
         font-weight: bolder;
         padding: 0px auto;
         text-align: center;
         background: none;
         border: 2px dotted transparent;
-        /*To prevent textarea resize and fixed size*/
-        resize: none;
       }
 
       .info{
         font-family: 'Lato', sans-serif;
         padding: 0;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: bold;
         text-align: center;
         background: none;
@@ -63,16 +61,21 @@ body{
         padding-bottom: 500px;
       }
 
-      #button{
-        text-align: center;
-        margin: auto;
-        display: flex;
-        justify-content: center;
 
+      form{
+          width: 500px;
+          text-align: center;
+          padding: 0;
+          margin: 0 auto;
+          border: 2px solid black;
+          display: block;
+          background-color: #ddb8f2;
       }
 
+      button{margin: 0 auto;}
+
+
       p{
-        padding: 20px;
         margin: 0 auto;
         text-align: center;
       }
@@ -80,9 +83,9 @@ body{
       textarea{
         overflow: auto;
         /*To center text area and position it vertically*/
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       /*Making placeholder dissapear when type*/
@@ -95,6 +98,63 @@ body{
       }
 
     </style>
+
+    <script>
+    function Submit(){
+      var name = document.getElementById("name").value;
+      var date = document.getElementById("date").value;
+      var address = document.getElementById("address").value;
+
+
+      var box1 = document.getElementById("Name");
+      box1.innerHTML = name;
+      var box2 = document.getElementById("Date");
+      box2.innerHTML = date;
+      var box3 = document.getElementById("Address");
+      box3.innerHTML = address;
+
+    }
+
+    function Favourite(){
+      var name = document.getElementById("name").value;
+      var date = document.getElementById("date").value;
+      var address = document.getElementById("address").value;
+
+
+
+      var box1 = document.getElementById("Name");
+      box1.innerHTML = name;
+      var box2 = document.getElementById("Date");
+      box2.innerHTML = date;
+      var box3 = document.getElementById("Address");
+      box3.innerHTML = address;
+
+
+     if(name&&date&&address){
+      localStorage.setItem("Name:",name);
+      localStorage.setItem("Date:",date);
+      localStorage.setItem("Address:",address);
+
+
+    }
+
+    function Remove() {
+      var name = document.getElementById("name").value;
+      var date = document.getElementById("date").value;
+      var address = document.getElementById("address").value;
+
+      if(name&&date&&address){}
+      else {
+        localStorage.removeItem("Name:",name);
+        localStorage.removeItem("Date:",date);
+        localStorage.removeItem("Address:",address);
+
+      }
+    }
+
+      }
+    </script>
+
 
   </head>
   <body>
@@ -116,19 +176,33 @@ body{
         <p class="info">Please join us in</p>
         <p class="host">Graduation Celebration</p>
         <p class="info"> honouring</p>
-        <textarea class="host"  placeholder="Enter Name" ></textarea>
-        <textarea class="info"  placeholder="Enter Date & Time" ></textarea>
-        <textarea class="info"  placeholder="Enter Address" ></textarea>
+        <textarea class="host" id="Name" readonly>Enter Name</textarea>
+        <textarea class="info" id="Date" readonly >Enter Date & Time</textarea>
+        <textarea class="info" id="Address" readonly>Enter Address</textarea>
       </div>
   </div>
 
+  <form>
+  <label class="info">Enter name</label>
   <div>
-    <div id="button">
-      <button type="button" name="button" onclick="Save()">Save as Favourite</button>
-      <button type="button" name="button" onclick="change()">Delete</button>
-      <button type="button" name="button" onclick="Remove()">Submit</button>
-    </div>
+    <input id="name" type="text"/><br>
   </div>
+
+  <label class="info">Enter Date & Time</label>
+  <div>
+    <textarea id="date" name="name" rows="2" cols="50"></textarea><br>
+  </div>
+
+  <label class="info">Enter Address</label>
+  <div >
+    <textarea id="address" name="name" rows="5" cols="50"></textarea><br>
+  </div>
+
+  <button type="button" name="button" onclick="Favourite()">Save as Favourite</button>
+  <button type="button" name="button" onclick="Submit()">Submit</button>
+  <button type="button" name="button" onclick="Remove()">Delete</button>
+  </form>
+
 
   </body>
 </html>
